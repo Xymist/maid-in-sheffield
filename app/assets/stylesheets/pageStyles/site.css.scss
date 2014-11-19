@@ -1,0 +1,19 @@
+// Place all the styles related to the site controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+#frontslider .item img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+#slidertext {
+   position:absolute; 
+   top: 230px; 
+   left: 960px;  
+   color: white; 
+   font: bold 24px/45px; 
+   letter-spacing: -1px;  
+   padding: 10px;
+   z-index:5;
+}

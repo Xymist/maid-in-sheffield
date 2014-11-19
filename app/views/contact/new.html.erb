@@ -1,0 +1,38 @@
+<div class="container">
+   <h1 class="pull-left headline"><br>Contact Us</h1>
+</div> 
+
+<div class="container content">	
+  <div class="col-md-8 col-md-offset-2" style="height: 600px;">
+    <%= form_for Message.new, :url => contact_path do |form| %>
+    <fieldset class="fields">
+      <div class="field">
+        <%= form.label :name %>
+        <%= form.text_field :name %>
+      </div>
+
+      <div class="field">
+        <%= form.label :email %>
+        <%= form.text_field :email %>
+      </div>
+      
+      <div class="field">
+        <%= form.label :subject %>
+        <%= form.text_field :subject %>
+      </div>
+
+      <div class="field">
+        <%= form.label :body %>
+        <%= form.text_area :body %>
+      </div>
+    </fieldset>
+
+    <fieldset class="actions">
+      <%= form.submit "Send Email" %>
+    </fieldset>
+    
+    
+    <% end %>
+  </div>
+
+</div>

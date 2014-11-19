@@ -1,0 +1,38 @@
+<div class="header" style="position: fixed; width: 100%; background: #FFFFFF; z-index: 10">
+  <div class="navbar navbar-default" role="navigation">
+    <div class="container">
+      <div class="topbar">
+        <div class="col-xs-2">
+          <%= link_to(image_tag("MIS_Banner_notSoSmall.png", alt: "Logo"), root_path, id: "biglogo") %>
+          <%= link_to(image_tag("mis-banner-small.png", alt: "Logo"), root_path, id: "smalllogo") %>
+        </div>
+        <div class="col-xs-10">
+          <ul class="loginbar pull-right">
+            <li class="topbar-devider"></li>   
+            <li><%= link_to 'FAQ', faq_site_index_path %></li>  
+            <li class="topbar-devider"></li>   
+            <li><%= link_to 'Contact Us', contact_path %></li>  
+            <li class="topbar-devider"></li>   
+            <li><a href="https://maidinsheffield.launch27.com/signup">Client Login</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="fa fa-bars"></span>
+        </button>
+      </div>
+
+      <div class="collapse navbar-collapse navbar-responsive-collapse">
+        <ul class="nav navbar-nav">
+          <li><%= link_to 'About Maid In Sheffield', about_us_site_index_path %></li>              
+          <li><%= link_to 'Testimonials', testimonials_site_index_path %></li>                                                          
+          <li><%= link_to 'Price List', price_grid_site_index_path %></li>
+          <li><%= link_to 'Student Deal', student_pack_site_index_path %></li>
+          <li><%= link_to 'Book Now!', booking_form_site_index_path %></li>
+        </ul>
+      </div>
+    </div>    
+  </div>            
+</div>

@@ -1,0 +1,523 @@
+<div class="container">
+<h1 class="pull-left headline"><br>Price List</h1>
+</div>
+<div class="container content">
+
+  <div id="bookbuttons" class="row">
+    <div style="height: 60px; border: 1px #000000;" class="col-xs-3 col-sm-3">
+    <center><br><h4><strong>House Size</strong></h4></center>
+    </div>
+    <div style="height: 60px; border: 1px #000000;" class="col-xs-3 col-sm-3">
+    <center><a href="../booking_form/"><button type="button" class="btn btn-bronze"><h5><strong>Bronze Service</strong></h5><h5>Book Now!</h5></button></a></center>
+    </div>
+    <div style="height: 60px; border: 1px #000000;" class="col-xs-3 col-sm-3">
+    <center><a href="../booking_form/"><button type="button" class="btn btn-silver"><h5><strong>Silver Service</strong></h5><h5>Book Now!</h5></button></a></center>
+    </div>
+    <div style="height: 60px; border: 1px #000000;" class="col-xs-3 col-sm-3">
+    <center><a href="../booking_form/"><button type="button" class="btn btn-gold"><h5><strong>Gold Service</strong></h5><h5>Book Now!</h5></button></a></center>
+    </div>
+  </div>
+  
+  <div id="servicetype" class="row">
+    <div style="border-radius: 5px;" class="col-xs-5 col-sm-3">
+    <center><h4><strong>House Size</strong></h4></center>
+    </div>
+    <div id="smallbronze" class="col-xs-2 col-sm-3">
+	<center><h5><strong>B</strong></h5></center>
+    </div>
+    <div id="smallsilver" class="col-xs-2 col-sm-3">
+	<center><h5><strong>S</strong></h5></center>
+    </div>
+    <div id="smallgold" class="col-xs-2 col-sm-3">
+	<center><h5><strong>G</strong></h5></center>
+    </div>
+  </div>
+  
+  <div id="padrow" class="row">
+    <div style="height: 30px; border: 1px #000000;" class="col-xs-3 col-sm-3">
+    </div>
+    <div style="height: 30px; border: 1px #000000;" class="col-xs-3 col-sm-3">
+    </div>
+    <div style="height: 30px; border: 1px #000000;" class="col-xs-3 col-sm-3">
+    </div>
+    <div style="height: 30px; border: 1px #000000;" class="col-xs-3 col-sm-3">
+    </div>
+  </div>
+  
+  <div class="col-xs-12" style="overflow: hidden;">
+  <% @prices.each do |home| %>
+    <div class="row">
+      <div style="height: 60px; border: 1px  #000000; background-color: #B7FFC9; border-top-left-radius: 5px; border-bottom-left-radius: 5px;display: table-cell; vertical-align: middle;" class="col-xs-5 col-sm-3">
+        <center><small><br></small><h5><strong><%= home.size %> Home</strong></h5></center>
+      </div>
+      <div style="height: 60px; border: 1px  #000000; background-color: #C2FFDC; display: table-cell; vertical-align: middle;" class="col-xs-2 col-sm-3">
+        <center><small><br></small><h6>£<%= home.bronze_price %></h6></center>
+      </div>
+      <div style="height: 60px; border: 1px  #000000; background-color: #B7FFC9; display: table-cell; vertical-align: middle;" class="col-xs-2 col-sm-3">
+        <center><small><br></small><h6>£<%= home.silver_price %></h6></center>
+      </div>
+      <div style="height: 60px; border: 1px  #000000; background-color: #C2FFDC; border-top-right-radius: 5px; border-bottom-right-radius: 5px;display: table-cell; vertical-align: middle;" class="col-xs-2 col-sm-3">
+        <center><small><br></small><h6>£<%= home.gold_price %></h6></center>
+      </div>
+    </div>
+  <% end %>
+  </div>
+  
+  <div id="blankpricerow" class="row">
+    <div style="height: 60px; border: 1px  #000000;" class="col-xs-5 col-sm-3">
+    </div>
+    <div style="height: 60px; border: 1px  #000000;" class="col-xs-2 col-sm-3">
+    </div>
+    <div style="height: 60px; border: 1px  #000000;" class="col-xs-2 col-sm-3">
+    </div>
+    <div style="height: 60px; border: 1px  #000000;" class="col-xs-2 col-sm-3">
+    </div>	
+  </div>
+  
+  <div id="discounttitles" class="row">
+    <div style="height: 60px; border: 1px  #000000; background-color: #C2FFDC; border-top-left-radius: 5px; display: table-cell; vertical-align: middle;" class="col-xs-4">
+	<center><h5><strong>Weekly</strong></h5></center>
+    </div>
+    <div style="height: 60px; border: 1px  #000000; background-color: #C2FFDC; display: table-cell; vertical-align: middle;" class="col-xs-4">
+	<center><h5><strong>Fortnightly</strong></h5></center>
+    </div>
+    <div style="height: 60px; border: 1px  #000000; background-color: #C2FFDC; border-top-right-radius: 5px; display: table-cell; vertical-align: middle;" class="col-xs-4">
+	<center><h5><strong>Monthly</strong></h5></center>
+    </div>	
+  </div>
+  
+    <div id="discountnumbers" class="row">
+    <div style="height: 60px; border: 1px  #000000; background-color: #B7FFC9; border-bottom-left-radius: 5px; display: table-cell; vertical-align: middle;" class="col-xs-4">
+	<center><h6>15% Discount</h6></center>
+    </div>
+    <div style="height: 60px; border: 1px  #000000; background-color: #B7FFC9; display: table-cell; vertical-align: middle;" class="col-xs-4">
+	<center><h6>10% Discount</h6></center>
+    </div>
+    <div style="height: 60px; border: 1px  #000000; background-color: #B7FFC9; border-bottom-right-radius: 5px; border-bottom-left-radius: 0px; display: table-cell; vertical-align: middle;" class="col-xs-4">
+	<center><h6>5% Discount</h6></center>
+    </div>	
+  </div>
+  
+    <div id="blankpricerow" class="row">
+    <div style="height: 60px; border: 1px  #000000;" class="col-xs-5 col-sm-3">
+    </div>
+    <div style="height: 60px; border: 1px  #000000;" class="col-xs-2 col-sm-3">
+    </div>
+    <div style="height: 60px; border: 1px  #000000;" class="col-xs-2 col-sm-3">
+    </div>
+    <div style="height: 60px; border: 1px  #000000;" class="col-xs-2 col-sm-3">
+    </div>	
+  </div>
+  
+  <div class="row">
+    <div style="height: 60px; border: 1px  #000000; background-color: #B7FFC9; border-top-left-radius: 5px;" class="col-xs-5 col-sm-3">
+	<center><h5><strong>All Areas</strong></h5></center>
+    </div>
+    <div style="height: 60px; border: 1px  #000000; background-color: #B7FFC9;" class="col-xs-2 col-sm-3">
+    </div>
+    <div style="height: 60px; border: 1px  #000000; background-color: #B7FFC9;" class="col-xs-2 col-sm-3">
+    </div>
+    <div style="height: 60px; border: 1px  #000000; background-color: #B7FFC9; border-top-right-radius: 5px;" class="col-xs-2 col-sm-3">
+    </div>	
+  </div>
+  
+  <div class="row">
+    <div style="height: 60px; border: 1px  #000000; background-color: #C2FFDC;" class="col-xs-5 col-sm-3">
+	<center><h6>Vacuuming</h6></center>
+    </div>
+    <div style="height: 60px; border: 1px  #000000; font-size: 24px; background-color: #C2FFDC; color: #CD7F32;" class="col-xs-2 col-sm-3">
+	<center><i class="fa fa-check"></i></center>
+    </div>
+    <div style="height: 60px; border: 1px  #000000; font-size: 24px; background-color: #C2FFDC; color: #C0C0C0;" class="col-xs-2 col-sm-3">
+	<center><i class="fa fa-check"></i></center>
+    </div>
+    <div style="height: 60px; border: 1px  #000000; font-size: 24px; background-color: #C2FFDC; color: #CCB646;" class="col-xs-2 col-sm-3">
+	<center><i class="fa fa-check"></i></center>
+    </div>	
+  </div>
+  
+  <div class="row">
+    <div style="height: 60px; border: 1px  #000000; background-color: #B7FFC9;" class="col-xs-5 col-sm-3">
+	<center><h6>Dusting & Cobweb Removal</h6></center>
+    </div>
+    <div style="height: 60px; border: 1px  #000000; font-size: 24px; background-color: #B7FFC9; color: #CD7F32;" class="col-xs-2 col-sm-3">
+	<center><i class="fa fa-check"></i></center>
+    </div>
+    <div style="height: 60px; border: 1px  #000000; font-size: 24px; background-color: #B7FFC9; color: #C0C0C0;" class="col-xs-2 col-sm-3">
+	<center><i class="fa fa-check"></i></center>
+    </div>
+    <div style="height: 60px; border: 1px  #000000; font-size: 24px; background-color: #B7FFC9; color: #CCB646;" class="col-xs-2 col-sm-3">
+	<center><i class="fa fa-check"></i></center>
+    </div>	
+  </div>
+  
+  <div class="row">
+    <div style="height: 60px; border: 1px  #000000; background-color: #C2FFDC;" class="col-xs-5 col-sm-3">
+	<center><h6>Blinds & Window Sills</h6></center>
+    </div>
+    <div style="height: 60px; border: 1px  #000000; font-size: 24px; background-color: #C2FFDC; color: #CD7F32;" class="col-xs-2 col-sm-3">
+	<center><i class="fa fa-check"></i></center>
+    </div>
+    <div style="height: 60px; border: 1px  #000000; font-size: 24px; background-color: #C2FFDC; color: #C0C0C0;" class="col-xs-2 col-sm-3">
+	<center><i class="fa fa-check"></i></center>
+    </div>
+    <div style="height: 60px; border: 1px  #000000; font-size: 24px; background-color: #C2FFDC; color: #CCB646;" class="col-xs-2 col-sm-3">
+	<center><i class="fa fa-check"></i></center>
+    </div>	
+  </div>
+  
+  <div class="row">
+    <div style="height: 60px; border: 1px  #000000; background-color: #B7FFC9;" class="col-xs-5 col-sm-3">
+	<center><h6>Remove Rubbish</h6></center>
+    </div>
+    <div style="height: 60px; border: 1px  #000000; font-size: 24px; background-color: #B7FFC9; color: #CD7F32;" class="col-xs-2 col-sm-3">
+	<center><i class="fa fa-check"></i></center>
+    </div>
+    <div style="height: 60px; border: 1px  #000000; font-size: 24px; background-color: #B7FFC9; color: #C0C0C0;" class="col-xs-2 col-sm-3">
+	<center><i class="fa fa-check"></i></center>
+    </div>
+    <div style="height: 60px; border: 1px  #000000; font-size: 24px; background-color: #B7FFC9; color: #CCB646;" class="col-xs-2 col-sm-3">
+	<center><i class="fa fa-check"></i></center>
+    </div>	
+  </div>
+  
+  <div class="row">
+    <div style="height: 60px; border: 1px  #000000; background-color: #C2FFDC;" class="col-xs-5 col-sm-3">
+	<center><h6>Dust & Wipe Doors</h6></center>
+    </div>
+    <div style="height: 60px; border: 1px  #000000; font-size: 24px; background-color: #C2FFDC;" class="col-xs-2 col-sm-3">
+	<center><i class="fa fa-minus color-grey"></i></center>
+    </div>
+    <div style="height: 60px; border: 1px  #000000; font-size: 24px; background-color: #C2FFDC; color: #C0C0C0;" class="col-xs-2 col-sm-3">
+	<center><i class="fa fa-check"></i></center>
+    </div>
+    <div style="height: 60px; border: 1px  #000000; font-size: 24px; background-color: #C2FFDC; color: #CCB646;" class="col-xs-2 col-sm-3">
+	<center><i class="fa fa-check"></i></center>
+    </div>	
+  </div>
+  
+  <div class="row">
+    <div style="height: 60px; border: 1px  #000000; background-color: #B7FFC9;" class="col-xs-5 col-sm-3">
+	<center><h6>Clean Paintwork</h6></center>
+    </div>
+    <div style="height: 60px; border: 1px  #000000; font-size: 24px; background-color: #B7FFC9;" class="col-xs-2 col-sm-3">
+	<center><i class="fa fa-minus color-grey"></i></center>
+    </div>
+    <div style="height: 60px; border: 1px  #000000; font-size: 24px; background-color: #B7FFC9; color: #C0C0C0;" class="col-xs-2 col-sm-3">
+	<center><i class="fa fa-check"></i></center>
+    </div>
+    <div style="height: 60px; border: 1px  #000000; font-size: 24px; background-color: #B7FFC9; color: #CCB646;" class="col-xs-2 col-sm-3">
+	<center><i class="fa fa-check"></i></center>
+    </div>	
+  </div>
+  
+  <div class="row">
+    <div style="height: 60px; border: 1px  #000000; background-color: #C2FFDC;" class="col-xs-5 col-sm-3">
+	<center><h5><strong>Kitchen</strong></h5></center>
+    </div>
+    <div style="height: 60px; border: 1px  #000000; background-color: #C2FFDC;" class="col-xs-2 col-sm-3">
+    </div>
+    <div style="height: 60px; border: 1px  #000000; background-color: #C2FFDC;" class="col-xs-2 col-sm-3">
+    </div>
+    <div style="height: 60px; border: 1px  #000000; background-color: #C2FFDC;" class="col-xs-2 col-sm-3">
+    </div>	
+  </div>
+  
+  <div class="row">
+    <div style="height: 60px; border: 1px  #000000; background-color: #B7FFC9;" class="col-xs-5 col-sm-3">
+	<center><h6>Mop Hard Floors</h6></center>
+    </div>
+    <div style="height: 60px; border: 1px  #000000; font-size: 24px; background-color: #B7FFC9; color: #CD7F32;" class="col-xs-2 col-sm-3">
+	<center><i class="fa fa-check"></i></center>
+    </div>
+    <div style="height: 60px; border: 1px  #000000; font-size: 24px; background-color: #B7FFC9; color: #C0C0C0;" class="col-xs-2 col-sm-3">
+	<center><i class="fa fa-check"></i></center>
+    </div>
+    <div style="height: 60px; border: 1px  #000000; font-size: 24px; background-color: #B7FFC9; color: #CCB646;" class="col-xs-2 col-sm-3">
+	<center><i class="fa fa-check"></i></center>
+    </div>	
+  </div>
+  
+  <div class="row">
+    <div style="height: 60px; border: 1px  #000000; background-color: #C2FFDC;" class="col-xs-5 col-sm-3">
+	<center><h6>Clean Countertops</h6></center>
+    </div>
+    <div style="height: 60px; border: 1px  #000000; font-size: 24px; background-color: #C2FFDC; color: #CD7F32;" class="col-xs-2 col-sm-3">
+	<center><i class="fa fa-check"></i></center>
+    </div>
+    <div style="height: 60px; border: 1px  #000000; font-size: 24px; background-color: #C2FFDC; color: #C0C0C0;" class="col-xs-2 col-sm-3">
+	<center><i class="fa fa-check"></i></center>
+    </div>
+    <div style="height: 60px; border: 1px  #000000; font-size: 24px; background-color: #C2FFDC; color: #CCB646;" class="col-xs-2 col-sm-3">
+	<center><i class="fa fa-check"></i></center>
+    </div>	
+  </div>
+  
+  <div class="row">
+    <div style="height: 60px; border: 1px  #000000; background-color: #B7FFC9;" class="col-xs-5 col-sm-3">
+	<center><h6>Clean Stove & Fans</h6></center>
+    </div>
+    <div style="height: 60px; border: 1px  #000000; font-size: 24px; background-color: #B7FFC9; color: #CD7F32;" class="col-xs-2 col-sm-3">
+	<center><i class="fa fa-check"></i></center>
+    </div>
+    <div style="height: 60px; border: 1px  #000000; font-size: 24px; background-color: #B7FFC9; color: #C0C0C0;" class="col-xs-2 col-sm-3">
+	<center><i class="fa fa-check"></i></center>
+    </div>
+    <div style="height: 60px; border: 1px  #000000; font-size: 24px; background-color: #B7FFC9; color: #CCB646;" class="col-xs-2 col-sm-3">
+	<center><i class="fa fa-check"></i></center>
+    </div>	
+  </div>
+  
+  <div class="row">
+    <div style="height: 60px; border: 1px  #000000; background-color: #C2FFDC;" class="col-xs-5 col-sm-3">
+	<center><h6>Scrub Sinks</h6></center>
+    </div>
+    <div style="height: 60px; border: 1px  #000000; font-size: 24px; background-color: #C2FFDC; color: #CD7F32;" class="col-xs-2 col-sm-3">
+	<center><i class="fa fa-check"></i></center>
+    </div>
+    <div style="height: 60px; border: 1px  #000000; font-size: 24px; background-color: #C2FFDC; color: #C0C0C0;" class="col-xs-2 col-sm-3">
+	<center><i class="fa fa-check"></i></center>
+    </div>
+    <div style="height: 60px; border: 1px  #000000; font-size: 24px; background-color: #C2FFDC; color: #CCB646;" class="col-xs-2 col-sm-3">
+	<center><i class="fa fa-check"></i></center>
+    </div>	
+  </div>
+  
+  <div class="row">
+    <div style="height: 60px; border: 1px  #000000; background-color: #B7FFC9;" class="col-xs-5 col-sm-3">
+	<center><h6>Polish Stainless Steel</h6></center>
+    </div>
+    <div style="height: 60px; border: 1px  #000000; font-size: 24px; background-color: #B7FFC9; color: #CD7F32;" class="col-xs-2 col-sm-3">
+	<center><i class="fa fa-check"></i></center>
+    </div>
+    <div style="height: 60px; border: 1px  #000000; font-size: 24px; background-color: #B7FFC9; color: #C0C0C0;" class="col-xs-2 col-sm-3">
+	<center><i class="fa fa-check"></i></center>
+    </div>
+    <div style="height: 60px; border: 1px  #000000; font-size: 24px; background-color: #B7FFC9; color: #CCB646;" class="col-xs-2 col-sm-3">
+	<center><i class="fa fa-check"></i></center>
+    </div>	
+  </div>
+  
+  <div class="row">
+    <div style="height: 60px; border: 1px  #000000; background-color: #C2FFDC;" class="col-xs-5 col-sm-3">
+	<center><h6>Clean Inside Microwave</h6></center>
+    </div>
+    <div style="height: 60px; border: 1px  #000000; font-size: 24px; background-color: #C2FFDC;" class="col-xs-2 col-sm-3">
+	<center><i class="fa fa-minus color-grey"></i></center>
+    </div>
+    <div style="height: 60px; border: 1px  #000000; font-size: 24px; background-color: #C2FFDC; color: #C0C0C0;" class="col-xs-2 col-sm-3">
+	<center><i class="fa fa-check"></i></center>
+    </div>
+    <div style="height: 60px; border: 1px  #000000; font-size: 24px; background-color: #C2FFDC; color: #CCB646;" class="col-xs-2 col-sm-3">
+	<center><i class="fa fa-check"></i></center>
+    </div>	
+  </div>
+  
+  <div class="row">
+    <div style="height: 60px; border: 1px  #000000; background-color: #B7FFC9;" class="col-xs-5 col-sm-3">
+	<center><h6>Clean Cabinetry</h6></center>
+    </div>
+    <div style="height: 60px; border: 1px  #000000; font-size: 24px; background-color: #B7FFC9;" class="col-xs-2 col-sm-3">
+	<center><i class="fa fa-minus color-grey"></i></center>
+    </div>
+    <div style="height: 60px; border: 1px  #000000; font-size: 24px; background-color: #B7FFC9; color: #C0C0C0;" class="col-xs-2 col-sm-3">
+	<center><i class="fa fa-check"></i></center>
+    </div>
+    <div style="height: 60px; border: 1px  #000000; font-size: 24px; background-color: #B7FFC9; color: #CCB646;" class="col-xs-2 col-sm-3">
+	<center><i class="fa fa-check"></i></center>
+    </div>	
+  </div>
+  
+  <div class="row">
+    <div style="height: 60px; border: 1px  #000000; background-color: #C2FFDC;" class="col-xs-5 col-sm-3">
+	<center><h6>Scrub Fridge</h6></center>
+    </div>
+    <div style="height: 60px; border: 1px  #000000; font-size: 24px; background-color: #C2FFDC;" class="col-xs-2 col-sm-3">
+	<center><i class="fa fa-minus color-grey"></i></center>
+    </div>
+    <div style="height: 60px; border: 1px  #000000; font-size: 24px; background-color: #C2FFDC; color: #C0C0C0;" class="col-xs-2 col-sm-3">
+	<center><i class="fa fa-check"></i></center>
+    </div>
+    <div style="height: 60px; border: 1px  #000000; font-size: 24px; background-color: #C2FFDC; color: #CCB646;" class="col-xs-2 col-sm-3">
+	<center><i class="fa fa-check"></i></center>
+    </div>	
+  </div>
+  
+  <div class="row">
+    <div style="height: 60px; border: 1px  #000000; background-color: #B7FFC9;" class="col-xs-5 col-sm-3">
+	<center><h6>Clean Inside Cabinets</h6></center>
+    </div>
+    <div style="height: 60px; border: 1px  #000000; font-size: 24px; background-color: #B7FFC9;" class="col-xs-2 col-sm-3">
+	<center><i class="fa fa-minus color-grey"></i></center>
+    </div>
+    <div style="height: 60px; border: 1px  #000000; font-size: 24px; background-color: #B7FFC9;" class="col-xs-2 col-sm-3">
+	<center><i class="fa fa-minus color-grey"></i></center>
+    </div>
+    <div style="height: 60px; border: 1px  #000000; font-size: 24px; background-color: #B7FFC9; color: #CCB646;" class="col-xs-2 col-sm-3">
+	<center><i class="fa fa-check"></i></center>
+    </div>	
+  </div>
+  
+  <div class="row">
+    <div style="height: 60px; border: 1px  #000000; background-color: #C2FFDC;" class="col-xs-5 col-sm-3">
+	<center><h6>Washing Up</h6></center>
+    </div>
+    <div style="height: 60px; border: 1px  #000000; font-size: 24px; background-color: #C2FFDC;" class="col-xs-2 col-sm-3">
+	<center><i class="fa fa-minus color-grey"></i></center>
+    </div>
+    <div style="height: 60px; border: 1px  #000000; font-size: 24px; background-color: #C2FFDC;" class="col-xs-2 col-sm-3">
+	<center><i class="fa fa-minus color-grey"></i></center>
+    </div>
+    <div style="height: 60px; border: 1px  #000000; font-size: 24px; background-color: #C2FFDC; color: #CCB646;" class="col-xs-2 col-sm-3">
+	<center><i class="fa fa-check"></i></center>
+    </div>	
+  </div>
+  
+  <div class="row">
+    <div style="height: 60px; border: 1px  #000000; background-color: #B7FFC9;" class="col-xs-5 col-sm-3">
+	<center><h5><strong>Bathrooms</strong></h5></center>
+    </div>
+    <div style="height: 60px; border: 1px  #000000; font-size: 24px; background-color: #B7FFC9;" class="col-xs-2 col-sm-3">
+    </div>
+    <div style="height: 60px; border: 1px  #000000; font-size: 24px; background-color: #B7FFC9;" class="col-xs-2 col-sm-3">
+    </div>
+    <div style="height: 60px; border: 1px  #000000; font-size: 24px; background-color: #B7FFC9;" class="col-xs-2 col-sm-3">
+    </div>	
+  </div>
+  
+  <div class="row">
+    <div style="height: 60px; border: 1px  #000000; background-color: #C2FFDC;" class="col-xs-5 col-sm-3">
+	<center><h6>Disinfect Hard Surfaces</h6></center>
+    </div>
+    <div style="height: 60px; border: 1px  #000000; font-size: 24px; background-color: #C2FFDC; color: #CD7F32;" class="col-xs-2 col-sm-3">
+	<center><i class="fa fa-check"></i></center>
+    </div>
+    <div style="height: 60px; border: 1px  #000000; font-size: 24px; background-color: #C2FFDC; color: #C0C0C0;" class="col-xs-2 col-sm-3">
+	<center><i class="fa fa-check"></i></center>
+    </div>
+    <div style="height: 60px; border: 1px  #000000; font-size: 24px; background-color: #C2FFDC; color: #CCB646;" class="col-xs-2 col-sm-3">
+	<center><i class="fa fa-check"></i></center>
+    </div>	
+  </div>
+  
+  <div class="row">
+    <div style="height: 60px; border: 1px  #000000; background-color: #B7FFC9;" class="col-xs-5 col-sm-3">
+	<center><h6>Mop Floors</h6></center>
+    </div>
+    <div style="height: 60px; border: 1px  #000000; font-size: 24px; background-color: #B7FFC9; color: #CD7F32;" class="col-xs-2 col-sm-3">
+	<center><i class="fa fa-check"></i></center>
+    </div>
+    <div style="height: 60px; border: 1px  #000000; font-size: 24px; background-color: #B7FFC9; color: #C0C0C0;" class="col-xs-2 col-sm-3">
+	<center><i class="fa fa-check"></i></center>
+    </div>
+    <div style="height: 60px; border: 1px  #000000; font-size: 24px; background-color: #B7FFC9; color: #CCB646;" class="col-xs-2 col-sm-3">
+	<center><i class="fa fa-check"></i></center>
+    </div>	
+  </div>
+  
+  <div class="row">
+    <div style="height: 60px; border: 1px  #000000; background-color: #C2FFDC;" class="col-xs-5 col-sm-3">
+	<center><h6>Clean Lavatories</h6></center>
+    </div>
+    <div style="height: 60px; border: 1px  #000000; font-size: 24px; background-color: #C2FFDC; color: #CD7F32;" class="col-xs-2 col-sm-3">
+	<center><i class="fa fa-check"></i></center>
+    </div>
+    <div style="height: 60px; border: 1px  #000000; font-size: 24px; background-color: #C2FFDC; color: #C0C0C0;" class="col-xs-2 col-sm-3">
+	<center><i class="fa fa-check"></i></center>
+    </div>
+    <div style="height: 60px; border: 1px  #000000; font-size: 24px; background-color: #C2FFDC; color: #CCB646;" class="col-xs-2 col-sm-3">
+	<center><i class="fa fa-check"></i></center>
+    </div>	
+  </div>
+  
+  <div class="row">
+    <div style="height: 60px; border: 1px  #000000; background-color: #B7FFC9;" class="col-xs-5 col-sm-3">
+	<center><h6>Scrub Sinks</h6></center>
+    </div>
+    <div style="height: 60px; border: 1px  #000000; font-size: 24px; background-color: #B7FFC9; color: #CD7F32;" class="col-xs-2 col-sm-3">
+	<center><i class="fa fa-check"></i></center>
+    </div>
+    <div style="height: 60px; border: 1px  #000000; font-size: 24px; background-color: #B7FFC9; color: #C0C0C0;" class="col-xs-2 col-sm-3">
+	<center><i class="fa fa-check"></i></center>
+    </div>
+    <div style="height: 60px; border: 1px  #000000; font-size: 24px; background-color: #B7FFC9; color: #CCB646;" class="col-xs-2 col-sm-3">
+	<center><i class="fa fa-check"></i></center>
+    </div>	
+  </div>
+  
+  <div class="row">
+    <div style="height: 60px; border: 1px  #000000; background-color: #C2FFDC;" class="col-xs-5 col-sm-3">
+	<center><h6>Polish Stainless Steel</h6></center>
+    </div>
+    <div style="height: 60px; border: 1px  #000000; font-size: 24px; background-color: #C2FFDC; color: #CD7F32;" class="col-xs-2 col-sm-3">
+	<center><i class="fa fa-check"></i></center>
+    </div>
+    <div style="height: 60px; border: 1px  #000000; font-size: 24px; background-color: #C2FFDC; color: #C0C0C0;" class="col-xs-2 col-sm-3">
+	<center><i class="fa fa-check"></i></center>
+    </div>
+    <div style="height: 60px; border: 1px  #000000; font-size: 24px; background-color: #C2FFDC; color: #CCB646;" class="col-xs-2 col-sm-3">
+	<center><i class="fa fa-check"></i></center>
+    </div>	
+  </div>
+  
+  <div class="row">
+    <div style="height: 60px; border: 1px  #000000; background-color: #B7FFC9;" class="col-xs-5 col-sm-3">
+	<center><h6>Polish Mirrors</h6></center>
+    </div>
+    <div style="height: 60px; border: 1px  #000000; font-size: 24px; background-color: #B7FFC9; color: #CD7F32;" class="col-xs-2 col-sm-3">
+	<center><i class="fa fa-check"></i></center>
+    </div>
+    <div style="height: 60px; border: 1px  #000000; font-size: 24px; background-color: #B7FFC9; color: #C0C0C0;" class="col-xs-2 col-sm-3">
+	<center><i class="fa fa-check"></i></center>
+    </div>
+    <div style="height: 60px; border: 1px  #000000; font-size: 24px; background-color: #B7FFC9; color: #CCB646;" class="col-xs-2 col-sm-3">
+	<center><i class="fa fa-check"></i></center>
+    </div>	
+  </div>
+  
+  <div class="row">
+    <div style="height: 60px; border: 1px  #000000; background-color: #C2FFDC;" class="col-xs-5 col-sm-3">
+	<center><h6>Scrub Baths and Showers</h6></center>
+    </div>
+    <div style="height: 60px; border: 1px  #000000; font-size: 24px; background-color: #C2FFDC; color: #CD7F32;" class="col-xs-2 col-sm-3">
+	<center><i class="fa fa-check"></i></center>
+    </div>
+    <div style="height: 60px; border: 1px  #000000; font-size: 24px; background-color: #C2FFDC; color: #C0C0C0;" class="col-xs-2 col-sm-3">
+	<center><i class="fa fa-check"></i></center>
+    </div>
+    <div style="height: 60px; border: 1px  #000000; font-size: 24px; background-color: #C2FFDC; color: #CCB646;" class="col-xs-2 col-sm-3">
+	<center><i class="fa fa-check"></i></center>
+    </div>	
+  </div>
+  
+  <div class="row">
+    <div style="height: 60px; border: 1px  #000000; background-color: #B7FFC9;" class="col-xs-5 col-sm-3">
+	<center><h6>Clean Cabinets</h6></center>
+    </div>
+    <div style="height: 60px; border: 1px  #000000; font-size: 24px; background-color: #B7FFC9;" class="col-xs-2 col-sm-3">
+	<center><i class="fa fa-minus color-grey"></i></center>
+    </div>
+    <div style="height: 60px; border: 1px  #000000; font-size: 24px; background-color: #B7FFC9; color: #C0C0C0;" class="col-xs-2 col-sm-3">
+	<center><i class="fa fa-check"></i></center>
+    </div>
+    <div style="height: 60px; border: 1px  #000000; font-size: 24px; background-color: #B7FFC9; color: #CCB646;" class="col-xs-2 col-sm-3">
+	<center><i class="fa fa-check"></i></center>
+    </div>	
+  </div>
+  
+  <div class="row">
+    <div style="height: 60px; border: 1px  #000000; background-color: #C2FFDC; border-bottom-left-radius: 5px;" class="col-xs-5 col-sm-3">
+	<center><h6>Clean & Tidy Inside Cabinets</h6></center>
+    </div>
+    <div style="height: 60px; border: 1px  #000000; font-size: 24px; background-color: #C2FFDC;" class="col-xs-2 col-sm-3">
+	<center><i class="fa fa-minus color-grey"></i></center>
+    </div>
+    <div style="height: 60px; border: 1px  #000000; font-size: 24px; background-color: #C2FFDC;" class="col-xs-2 col-sm-3">
+	<center><i class="fa fa-minus color-grey"></i></center>
+    </div>
+    <div style="height: 60px; border: 1px  #000000; font-size: 24px; background-color: #C2FFDC; border-bottom-right-radius: 5px; color: #CCB646;" class="col-xs-2 col-sm-3">
+	<center><i class="fa fa-check"></i></center>
+    </div>	
+  </div>
+  
+</div>

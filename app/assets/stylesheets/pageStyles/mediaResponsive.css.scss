@@ -1,0 +1,20 @@
+@media screen and (min-width: 0px) and (max-width: 768px) {
+  #bookbuttons { display: none; }
+  #padrow { display: none; }
+  #computervideo { display: none; }
+  #servicetype { display: block; }
+  #mobilevideo {display: block; }
+  #smalllogo {display: block; }
+  #biglogo {display: none; }
+  
+}
+
+@media screen and (min-width: 769px) {
+  #bookbuttons { display: block; }
+  #padrow { display: block; }
+  #servicetype { display: none; }
+  #computervideo { display: block; }
+  #mobilevideo {display: none; }
+  #smalllogo {display: none; }
+  #biglogo {display: block; }
+}
