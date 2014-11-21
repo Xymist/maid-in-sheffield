@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  size: MyString
+  bronze_price: 1
+  silver_price: 1
+  gold_price: 1
+
+two:
+  size: MyString
+  bronze_price: 1
+  silver_price: 1
+  gold_price: 1

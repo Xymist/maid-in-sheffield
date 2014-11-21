@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
    
+  resources :homes
+
   root 'site#index'
   
   get 'contact', to: 'contact#new'

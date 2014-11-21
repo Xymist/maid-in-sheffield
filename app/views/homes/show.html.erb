@@ -1,0 +1,31 @@
+<div class="container">
+   <h1 class="pull-left headline"><br>Existing Home</h1>
+</div> 
+
+<div class="container content">	
+  <div class="col-md-8 col-md-offset-2" style="height: 600px;">
+
+    <p>
+      <strong>Size:</strong>
+      <%= @home.size %>
+    </p>
+
+    <p>
+      <strong>Bronze price:</strong>
+      <%= @home.bronze_price %>
+    </p>
+
+    <p>
+      <strong>Silver price:</strong>
+      <%= @home.silver_price %>
+    </p>
+
+    <p>
+      <strong>Gold price:</strong>
+      <%= @home.gold_price %>
+    </p>
+
+    <%= link_to 'Edit', edit_home_path(@home) %> |
+    <%= link_to 'Back To Homes Menu', homes_path %>
+  </div>
+</div>
