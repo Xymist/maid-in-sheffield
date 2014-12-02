@@ -112,7 +112,7 @@
   <div style="padding-top: 60px;"> 
     <% @services.each do |service| %>
         <div class="row">
-          <div class="col-xs-12 price-row #{<% if service.id%2==0 %> price-row-dark <% else %> price-row-pale <% end %>} #{<% if service.id==1 %> price-row-top <% elsif service.id==24 %> price-row-bottom <% end %>}">
+          <div class="col-xs-12 price-row #{<% if service.id%2==0 %> price-row-dark <% else %> price-row-pale <% end %>} #{<% if service.number==@firstservice.number %> price-row-top <% elsif service.number==@lastservice.number %> price-row-bottom <% end %>}">
             <div class="col-xs-5 col-sm-3">
               <center><h6><strong><%= service.name%></strong></h6></center>
             </div>
