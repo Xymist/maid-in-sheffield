@@ -56,5 +56,58 @@
     </div>
   </div>
   
-
+  <div id="pricetable" class="col-xs-12" style="overflow: hidden; padding-top: 30px;">
+    <% @prices.each do |home| %>
+      <div class="row">
+        <div class="col-xs-12 price-row" id="<%= home.size %>">
+          <div class="col-xs-5 col-sm-3">
+            <center><h5><strong><%= home.size %> Home</strong></h5></center>
+          </div>
+          <div class="col-xs-2 col-sm-3">
+            <center><h6>£<%= home.bronze_price %></h6></center>
+          </div>
+          <div class="col-xs-2 col-sm-3">
+            <center><h6>£<%= home.silver_price %></h6></center>
+          </div>
+          <div class="col-xs-2 col-sm-3">
+            <center><h6>£<%= home.gold_price %></h6></center>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+  
+  <div class="row">
+  	<p style="text-align: center">Please include bedrooms that have been converted into offices into your total number of bedrooms for your home.</p>
+  </div>
+  
+  <div id="discounttitles" class="row" style="padding-top: 40px">
+    <div class="col-xs-12 price-row price-row-pale price-row-top">
+      <div class="col-xs-4">
+        <center><h5><strong>Weekly</strong></h5></center>
+      </div>
+      <div class="col-xs-4">
+        <center><h5><strong>Fortnightly</strong></h5></center>
+      </div>
+      <div class="col-xs-4">
+        <center><h5><strong>Monthly</strong></h5></center>
+      </div>
+    </div>
+  </div>
+  
+  <div id="discountnumbers" class="row">
+    <div class="col-xs-12 price-row price-row-dark price-row-bottom">
+      <div class="col-xs-4">
+        <center><h6>15% Discount</h6></center>
+      </div>
+      <div class="col-xs-4">
+        <center><h6>10% Discount</h6></center>
+      </div>
+      <div class="col-xs-4">
+        <center><h6>5% Discount</h6></center>
+      </div>
+    </div>
+  </div>
+  
+  
 </div>
