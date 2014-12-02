@@ -24,7 +24,9 @@ service_list = [
   ["Blinds & Window Sills", "true", "true", "true"],
   ["Remove Rubbish & Empty Bins", "true", "true", "true"],
   ["Dust & Wipe Doors", "false", "true", "true"],
-  ["Spot Clean Walls & Paintwork", "true", "true", "true"],
+  ["Furniture", "false", "true", "true"],
+  ["Light Switches & Doorknobs", "false", "true", "true"]
+  ["Spot Clean Walls & Paintwork", "false", "false", "true"],
   ["Kitchen", "null", "null", "null"],
   ["Mop Hard Floors", "true", "true", "true"],
   ["Clean Countertops", "true", "true", "true"],
