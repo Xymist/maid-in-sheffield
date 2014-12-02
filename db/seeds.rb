@@ -50,5 +50,5 @@ service_list = [
 ]
 
 service_list.each do |name, bronze, silver, gold, number|
-  Service.find_or_create_by(:name => name, :bronze => bronze, :silver => silver, :gold => gold :number => number)
+  Service.find_or_create_by(:name => name, :bronze => bronze, :silver => silver, :gold => gold, :number => number)
 end
