@@ -109,5 +109,24 @@
     </div>
   </div>
   
-  
+  <div style="padding-top: 60px;"> 
+    <% @services.each do |service| %>
+        <div class="row">
+          <div class="col-xs-12 price-row #{<% if service.id%2==0 %> price-row-dark <% else %> price-row-pale <% end %>} #{<% if service.id==1 %> price-row-top <% elsif service.id==24 %> price-row-bottom <% end %>}">
+            <div class="col-xs-5 col-sm-3">
+              <center><h6><strong><%= service.name%></strong></h6></center>
+            </div>
+            <div class="col-xs-2 col-sm-3 col-bronze">
+              <center><% if service.bronze=="true" %> <i class="fa fa-check"> <% elsif service.bronze=="null" %> <% else %> <i class="fa fa-minus color-grey"> <% end %></i></center>
+            </div>
+            <div class="col-xs-2 col-sm-3 col-silver">
+              <center><% if service.silver=="true" %> <i class="fa fa-check"> <% elsif service.bronze=="null" %> <% else %> <i class="fa fa-minus color-grey"> <% end %></i></center>
+            </div>
+            <div class="col-xs-2 col-sm-3 col-gold">
+              <center><% if service.gold=="true" %> <i class="fa fa-check"> <% elsif service.bronze=="null" %> <% else %> <i class="fa fa-minus color-grey"> <% end %></i></center>
+            </div>
+          </div>
+        </div>
+    <% end %>
+  </div>
 </div>
