@@ -18,37 +18,37 @@ home_list.each do |size, bronze_price, silver_price, gold_price|
 end
 
 service_list = [
-  ["All Areas", "null", "null", "null"],
-  ["Vacuuming", "true", "true", "true"],
-  ["Dusting & Cobweb Removal", "true", "true", "true"],
-  ["Blinds & Window Sills", "true", "true", "true"],
-  ["Remove Rubbish & Empty Bins", "true", "true", "true"],
-  ["Dust & Wipe Doors", "false", "true", "true"],
-  ["Furniture", "false", "true", "true"],
-  ["Light Switches & Doorknobs", "false", "true", "true"]
-  ["Spot Clean Walls & Paintwork", "false", "false", "true"],
-  ["Kitchen", "null", "null", "null"],
-  ["Mop Hard Floors", "true", "true", "true"],
-  ["Clean Countertops", "true", "true", "true"],
-  ["Clean Stove & Fans", "true", "true", "true"],
-  ["Scrub Sinks", "true", "true", "true"],
-  ["Polish Stainless Steel", "true", "true", "true"],
-  ["Clean Inside Microwave", "false", "true", "true"],
-  ["Clean Cabinetry", "false", "true", "true"],
-  ["Scrub Fridge", "false", "true", "true"],
-  ["Clean Inside Cabinets", "false", "false", "true"],
-  ["Bathrooms", "null", "null", "null"],
-  ["Disinfect Hard Surfaces", "true", "true", "true"],
-  ["Mop Floors", "true", "true", "true"],
-  ["Clean Lavatories", "true", "true", "true"],
-  ["Scrub Sinks", "true", "true", "true"],
-  ["Polish Stainless Steel", "true", "true", "true"],
-  ["Polish Mirrors", "true", "true", "true"],
-  ["Scrub Baths & Showers", "false", "true", "true"],
-  ["Clean Cabinetry", "false", "true", "true"],
-  ["Clean & Tidy Inside Cabinets", "false", "false", "true"],
+  ["All Areas", "null", "null", "null", 1],
+  ["Vacuuming", "true", "true", "true", 2],
+  ["Dusting & Cobweb Removal", "true", "true", "true", 3],
+  ["Blinds & Window Sills", "true", "true", "true", 4],
+  ["Remove Rubbish & Empty Bins", "true", "true", "true", 5],
+  ["Dust & Wipe Doors", "false", "true", "true", 6],
+  ["Furniture", "false", "true", "true", 7],
+  ["Light Switches & Doorknobs", "false", "true", "true", 8]
+  ["Spot Clean Walls & Paintwork", "false", "false", "true", 9],
+  ["Kitchen", "null", "null", "null", 10],
+  ["Mop Hard Floors", "true", "true", "true", 11],
+  ["Clean Countertops", "true", "true", "true", 12],
+  ["Clean Stove & Fans", "true", "true", "true", 13],
+  ["Scrub Sinks", "true", "true", "true", 14],
+  ["Polish Stainless Steel", "true", "true", "true", 15],
+  ["Clean Inside Microwave", "false", "true", "true", 16],
+  ["Clean Cabinetry", "false", "true", "true", 17],
+  ["Scrub Fridge", "false", "true", "true", 18],
+  ["Clean Inside Cabinets", "false", "false", "true", 19],
+  ["Bathrooms", "null", "null", "null", 20],
+  ["Disinfect Hard Surfaces", "true", "true", "true", 21],
+  ["Mop Floors", "true", "true", "true", 22],
+  ["Clean Lavatories", "true", "true", "true", 23],
+  ["Scrub Sinks", "true", "true", "true", 24],
+  ["Polish Stainless Steel", "true", "true", "true", 25],
+  ["Polish Mirrors", "true", "true", "true", 26],
+  ["Scrub Baths & Showers", "false", "true", "true", 27],
+  ["Clean Cabinetry", "false", "true", "true", 28],
+  ["Clean & Tidy Inside Cabinets", "false", "false", "true", 29],
 ]
 
-service_list.each do |name, bronze, silver, gold|
-  Service.find_or_create_by(:name => name, :bronze => bronze, :silver => silver, :gold => gold)
+service_list.each do |name, bronze, silver, gold, number|
+  Service.find_or_create_by(:name => name, :bronze => bronze, :silver => silver, :gold => gold :number => number)
 end
