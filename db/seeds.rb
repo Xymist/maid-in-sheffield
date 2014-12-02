@@ -25,7 +25,7 @@ service_list = [
   ["Remove Rubbish & Empty Bins", "true", "true", "true", 5],
   ["Dust & Wipe Doors", "false", "true", "true", 6],
   ["Furniture", "false", "true", "true", 7],
-  ["Light Switches & Doorknobs", "false", "true", "true", 8]
+  ["Light Switches & Doorknobs", "false", "true", "true", 8],
   ["Spot Clean Walls & Paintwork", "false", "false", "true", 9],
   ["Kitchen", "null", "null", "null", 10],
   ["Mop Hard Floors", "true", "true", "true", 11],
