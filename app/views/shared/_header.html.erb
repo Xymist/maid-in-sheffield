@@ -14,8 +14,6 @@
             <li><%= link_to 'Contact Us', contact_path %></li>  
             <li class="topbar-devider"></li>   
             <li><a href="https://maidinsheffield.launch27.com/signup">Client Login</a></li>
-            <li class="topbar-devider"></li>
-            <li><a href="/site/booking_form/"><button type="submit" class="btn btn-success" style="font-size: 14px">BOOK NOW!</button></a></li>
           </ul>
         </div>
       </div>
@@ -27,12 +25,17 @@
       </div>
 
       <div class="collapse navbar-collapse navbar-responsive-collapse">
-        <ul class="nav navbar-nav">
-          <li><%= link_to 'About Maid In Sheffield', about_us_site_index_path %></li>              
-          <li><%= link_to 'Testimonials', testimonials_site_index_path %></li>                                                          
-          <li><%= link_to 'Price List', price_grid_site_index_path %></li>
-          <li><%= link_to 'Student Deal', student_pack_site_index_path %></li>
-        </ul>
+        <div class="col-xs-9">
+          <ul class="nav navbar-nav">
+            <li><%= link_to 'About Maid In Sheffield', about_us_site_index_path %></li>              
+            <li><%= link_to 'Testimonials', testimonials_site_index_path %></li>                                                          
+            <li><%= link_to 'Services & Pricing', price_grid_site_index_path %></li>
+            <li><%= link_to 'Student Deal', student_pack_site_index_path %></li>
+          </ul>
+        </div>
+        <div class="col-xs-1">
+		      <a href="booking_form/"><button type="submit" class="btn btn-success" style="font-size: 16px; top:5px">BOOK NOW!</button></a>
+		    </div>
       </div>
     </div>    
   </div>            
