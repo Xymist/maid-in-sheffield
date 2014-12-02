@@ -1,0 +1,58 @@
+.price-row{
+  height:60px;
+  padding-top: 10px;
+}
+
+.price-row-pale{
+  background-color: #C2FFDC;
+}
+
+.price-row-dark{
+  background-color: #B7FFC9;
+}
+
+.price-row-top{
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.price-row-bottom{
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+#One-Bedroom,
+#Three-Bedroom,
+#Five-Bedroom {
+  background-color: #B7FFC9;
+}
+
+#Two-Bedroom,
+#Four-Bedroom {
+  background-color: #C2FFDC;
+}
+
+#One-Bedroom {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+#Five-Bedroom {
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.col-bronze{
+  color: #CD7F32;
+  font-size: 24px;
+}
+
+.col-silver{
+  color: #C0C0C0;
+  font-size: 24px;
+}
+
+.col-gold{
+  color: #CCB646;
+  font-size: 24px;
+}

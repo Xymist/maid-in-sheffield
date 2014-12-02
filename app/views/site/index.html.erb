@@ -98,14 +98,41 @@
           <div class="col-md-4 col-xs-12"><%=link_to(image_tag("enjoy_service.png"), testimonials_site_index_path)%></div>
 				</div>
 				
-				<div class="col-sm-12 thumbnail-style">
-					<div class="headline"><h2>What Our Customers Say</h2></div>
-					<p><i class="fa fa-quote-left fa-2x color-green"></i>  Thank you for organising a brilliant clean this morning for my son's flat in Bents Green. A wonderful service and we will use you again soon. - Judi J  <i class="fa fa-quote-right fa-2x color-green"></i></p>				
+				<div class="col-xs-12 thumbnail-style">
+					<div id="lieslider" class="owl-carousel owl-theme">
+ 						<div class="item" >
+							<h3 style="color: white;	font-size: 18px;"><br>"Thank you for organising a brilliant clean this morning for my son's flat in Bents Green. <br> A wonderful service and we will use you again soon." <br> - Judi J</h3>				
+						</div>
+						<div class="item">
+							<h3 style="color: white;	font-size: 18px;"><br>"A perfect clean and all the windows look lovely!<br>So impressed with what you were able to do in a short time frame." <br> - Helen E, Hillsborough</h3>
+						</div>
+						<div class="item">
+							<h3 style="color: white;	font-size: 18px;"><br>"I was a bit hesitant at first to go with a website I'd not used before, <br>but the checklist made it clear what I was getting, and it all worked out great!" <br> - James P, Totley</h3>
+						</div>
+					</div>
 				</div>
 				
             </div>
         </div>       
     </div>
+<div id="call-to-action" class="container-fluid">
+	<div class="col-xs-6" style="text-align: right;">
+		<h1 style="color: white; padding-top: 20px; padding-bottom: 10px;">Ready To Book?</h1>
+	</div>
+	<div class="col-xs-6">
+		<a href="booking_form/" class="btn-u btn-brd btn-brd-hover btn-u-light" style="top: 10px; bottom: 10px;">Book Now</a>
+		<a href="pricegrid/" class="btn-u btn-brd btn-brd-hover btn-u-light" style="top: 10px; bottom: 10px;">Services & Pricing</a>
+	</div>
+</div>
+
+<div id="featured-in" class="container-fluid">
+	<div class="col-xs-2 col-xs-offset-1" style="text-align: center;"><%=image_tag("fe1.png")%></div>
+  <div class="col-xs-2" style="text-align: center;"><%=image_tag("fe3.png")%></div>
+	<div class="col-xs-2" style="text-align: center;"><%=image_tag("fe4.png")%></div>
+	<div class="col-xs-2" style="text-align: center;"><%=image_tag("fe5.png")%></div>
+  <div class="col-xs-2" style="text-align: center;"><%=image_tag("thestar.png")%></div>
+</div>
+
 <script type="text/javascript">
 $(document).ready(function() {
  
@@ -120,3 +147,18 @@ $(document).ready(function() {
  
 });
 </script>
+<script type="text/javascript">
+$(document).ready(function() {
+ 
+  $("#lieslider").owlCarousel({
+ 
+      navigation : false, // Show next and prev buttons
+      pagination : true,
+      slideSpeed : 300,
+      singleItem : true,
+      autoPlay : true,
+  });
+ 
+});
+</script> 
+<%= render partial: "shared/purechat"%>

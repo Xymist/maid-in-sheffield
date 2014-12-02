@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  bronze: false
+  silver: false
+  gold: false
+
+two:
+  name: MyString
+  bronze: false
+  silver: false
+  gold: false
