@@ -62,6 +62,8 @@ GEM
     owlcarousel-rails (1.1.3.3)
       jquery-rails
     pg (0.17.1)
+    pundit (0.3.0)
+      activesupport (>= 3.0.0)
     rack (1.5.2)
     rack-test (0.6.2)
       rack (>= 1.0)
@@ -130,6 +132,7 @@ DEPENDENCIES
   mailchimp-api
   owlcarousel-rails
   pg
+  pundit
   rails (= 4.1.7)
   rails_12factor
   sass-rails (~> 4.0.3)

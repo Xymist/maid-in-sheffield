@@ -1,14 +1,16 @@
 <div>
   <div id="frontslider" class="owl-carousel owl-theme" style="position:relative; width: 100%">
  
-    <div class="item"><%=image_tag("slider_1.jpg")%></div>
-    <div class="item"><%=image_tag("slider_2.jpg")%></div>
-    <div class="item"><%=image_tag("slider_3.jpg")%></div>
+    <div class="item"><%=image_tag('slider_1.jpg')%></div>
+    <div class="item"><%=image_tag('slider_2.jpg')%></div>
+    <div class="item"><%=image_tag('slider_3.jpg')%></div>
 
   </div>
-  <div class="col-xs-12" id="slidertext"><center>Introducing Maid In Sheffield <br><small>A professional maid service, with made in Sheffield quality</small></center>
-    <div class="col-xs-6"></div>
-    <div class="col-xs-6"></div>
+  <div class="col-xs-12" id="slidertext" style="text-align: center">Introducing Maid In Sheffield <br><small>A professional maid service, with made in Sheffield quality</small>
+    <div class="col-xs-6 col-xs-offset-3">
+      <%=link_to 'Who Are We?', about_us_path, :class => 'btn-u btn-brd btn-brd-hover btn-u-light btn-top-buffered'%>
+      <%=link_to 'Book Online', booking_form_path, :class => 'btn-u btn-brd btn-brd-hover btn-u-light btn-top-buffered'%>
+    </div>
   </div>
   
 </div>
@@ -25,7 +27,7 @@
                               	<input type="text" name="postcode" placeholder="Post Code">
                               </div>
                               <div class="col-xs-4">
-                                <a href="price_grid.html.erb"><button type="submit" class="btn btn-success" style="font-size: 18px">Book Now!</button></a>
+                                <%=link_to('Book Now!', price_grid_path, :type => 'button', :class => 'btn btn-success')%>
                               </div>
                           </form>
                      </div>
@@ -77,7 +79,7 @@
     			<div class="headline"><h2>Why Use Maid In Sheffield?</h2></div>
                 <div class="row">
                     <div class="col-sm-4">
-                        <%=image_tag("mis-transparent-medium.png", class: "img-responsive margin-bottom-20")%>
+                        <%=image_tag('mis-transparent-medium.png', class: 'img-responsive margin-bottom-20')%>
                     </div>
                     <div class="col-sm-8">
                         <p>Our mission is to simplify your life by offering convenient and an exceptional quality domestic house cleaning and maid service in Sheffield and the surrounding area. We offer a variety of services and guarantee all work or your money back.</p>
@@ -91,23 +93,23 @@
                     </div>
 				</div>
 				<div class="col-sm-12">
-					<div class="headline"><h2>How It Works</h2></div>
-          <div class="col-xs-12"><center><%=image_tag("simple_service.png")%></center></div>
-          <div class="col-md-4 col-xs-12"><%=link_to(image_tag("pick_service.png"), price_grid_site_index_path)%></div>
-          <div class="col-md-4 col-xs-12"><%=link_to(image_tag("book_service.png"), booking_form_site_index_path)%></div>
-          <div class="col-md-4 col-xs-12"><%=link_to(image_tag("enjoy_service.png"), testimonials_site_index_path)%></div>
+                  <div class="headline"><h2>How It Works</h2></div>
+                  <div class="col-xs-12"><center><%=image_tag('simple_service.png')%></center></div>
+                  <div class="col-md-4 col-xs-12"><%=link_to(image_tag('pick_service.png'), price_grid_path)%></div>
+                  <div class="col-md-4 col-xs-12"><%=link_to(image_tag('book_service.png'), booking_form_path)%></div>
+                  <div class="col-md-4 col-xs-12"><%=link_to(image_tag('enjoy_service.png'), testimonials_path)%></div>
 				</div>
 				
 				<div class="col-xs-12 thumbnail-style">
 					<div id="lieslider" class="owl-carousel owl-theme">
  						<div class="item" >
-							<h3 style="color: white;	font-size: 18px;"><br>"Thank you for organising a brilliant clean this morning for my son's flat in Bents Green. <br> A wonderful service and we will use you again soon." <br> - Judi J</h3>				
+							<h3><br>"Thank you for organising a brilliant clean this morning for my son's flat in Bents Green. <br> A wonderful service and we will use you again soon." <br> - Judi J</h3>
 						</div>
 						<div class="item">
-							<h3 style="color: white;	font-size: 18px;"><br>"A perfect clean and all the windows look lovely!<br>So impressed with what you were able to do in a short time frame." <br> - Helen E, Hillsborough</h3>
+							<h3><br>"A perfect clean and all the windows look lovely!<br>So impressed with what you were able to do in a short time frame." <br> - Helen E, Hillsborough</h3>
 						</div>
 						<div class="item">
-							<h3 style="color: white;	font-size: 18px;"><br>"I was a bit hesitant at first to go with a website I'd not used before, <br>but the checklist made it clear what I was getting, and it all worked out great!" <br> - James P, Totley</h3>
+							<h3><br>"I was a bit hesitant at first to go with a website I'd not used before, <br>but the checklist made it clear what I was getting, and it all worked out great!" <br> - James P, Totley</h3>
 						</div>
 					</div>
 				</div>
@@ -120,17 +122,17 @@
 		<h1 style="color: white; padding-top: 20px; padding-bottom: 10px;">Ready To Book?</h1>
 	</div>
 	<div class="col-xs-6">
-		<a href="site/booking_form/" class="btn-u btn-brd btn-brd-hover btn-u-light" style="top: 10px; bottom: 10px;">Book Now</a>
-		<a href="site/price_grid/" class="btn-u btn-brd btn-brd-hover btn-u-light" style="top: 10px; bottom: 10px;">Services & Pricing</a>
+        <%=link_to 'Book Now', booking_form_path, :class => 'btn-u btn-brd btn-brd-hover btn-u-light btn-pale-buffered'%>
+        <%=link_to 'Services & Pricing', price_grid_path, :class => 'btn-u btn-brd btn-brd-hover btn-u-light btn-pale-buffered'%>
 	</div>
 </div>
 
-<div id="featured-in" class="container-fluid">
-	<div class="col-xs-2 col-xs-offset-1" style="text-align: center;"><%=image_tag("fe1.png")%></div>
-  <div class="col-xs-2" style="text-align: center;"><%=image_tag("fe3.png")%></div>
-	<div class="col-xs-2" style="text-align: center;"><%=image_tag("fe4.png")%></div>
-	<div class="col-xs-2" style="text-align: center;"><%=image_tag("fe5.png")%></div>
-  <div class="col-xs-2" style="text-align: center;"><%=image_tag("thestar.png")%></div>
+<div id="featured-in" class="container-fluid"  style="text-align: center;">
+	<div class="col-xs-2 col-xs-offset-1"><%=image_tag('fe1.png')%></div>
+    <div class="col-xs-2"><%=image_tag('fe3.png')%></div>
+	<div class="col-xs-2"><%=image_tag('fe4.png')%></div>
+	<div class="col-xs-2"><%=image_tag('fe5.png')%></div>
+    <div class="col-xs-2"><%=image_tag('thestar.png')%></div>
 </div>
 
 <script type="text/javascript">
@@ -161,4 +163,4 @@ $(document).ready(function() {
  
 });
 </script> 
-<%= render partial: "shared/purechat"%>
+<%= render partial: 'shared/purechat' %>

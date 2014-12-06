@@ -7,19 +7,16 @@ Rails.application.routes.draw do
   get 'contact', to: 'contact#new'
   post 'contact', to: 'contact#create'
   
-  resources :site do
-    collection do
-      get :about_us
-      get :booking_form
-      get :client_login
-      get :faq
-      get :price_grid
-      get :privacy_policy
-      get :student_pack
-      get :testimonials
-      get :tos
-    end
-  end
+  get '/about_us' => 'site#about_us'
+  get '/booking_form' => 'site#booking_form'
+  get '/client_login' => 'site#client_login'
+  get '/faq' => 'site#faq'
+  get '/price_grid' => 'site#price_grid'
+  get '/privacy_policy' => 'site#privacy_policy'
+  get '/student_pack' => 'site#student_pack'
+  get '/testimonials' => 'site#testimonials'
+  get '/tos' => 'site#tos'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
