@@ -230,3 +230,41 @@
 		background-image: linear-gradient(180deg,rgba(255,228,88,1.00) 0%,rgba(255,215,0,1.00) 100%); 
 		border-radius: 5px;
 		}
+
+.btn-red {
+  background-color: darkred;
+  color: white;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  border: 5px;
+}
+.btn-red:hover,
+.btn-red:focus {
+  background-color: darkred;
+  background-repeat: repeat-x;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  border: 5px;
+}
+.btn-red:active,
+.btn-red.active {
+  background-color: darkred;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  border: 5px;
+}
+.btn-red:disabled,
+.btn-red[disabled] {
+  background-color: darkred;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  border: 5px;
+}

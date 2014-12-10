@@ -1,0 +1,41 @@
+!!!
+
+%script
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-54279814-1', 'auto');
+  ga('require', 'displayfeatures');
+  ga('send', 'pageview');
+
+%html
+  %head
+    %title
+      = content_for?(:title) ? yield(:title) : 'Maid In Sheffield'
+    %meta{:name => 'description', :content => 'Maid In Sheffield is the only domestic cleaning service in Sheffield with an online booking system. Book in 60 seconds. Fast, Professional, Flat rate prices.'}
+    %meta{:name => 'author', :content => 'James Duerden'}
+    %meta{:name => 'viewport', :content => 'width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no'}
+    = favicon_link_tag 'favicon.ico'
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+
+  %body
+    .wrapper
+      %header
+        = render 'shared/header'
+
+      %div{:style => 'position:relative; top: 100px'}
+        %main{:role => 'main'}
+          - if notice
+            %p.notice.flashies-green
+              = notice
+          - if alert
+            %p.alert.flashies-red
+              = alert
+          = yield
+
+
+        = render 'shared/footer'

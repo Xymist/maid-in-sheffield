@@ -19,6 +19,8 @@ gem 'owlcarousel-rails'
 gem 'rails_12factor', group: :production
 gem 'pundit'
 gem 'devise'
+gem 'haml'
+gem 'haml-rails'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks

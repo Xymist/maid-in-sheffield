@@ -1,0 +1,30 @@
+.footer
+  .container
+    .row
+      .col-md-4.md-margin-bottom-40
+        .headline
+          %h2 About
+        %p.margin-bottom-25.md-margin-bottom-40 Maid In Sheffield is the premium domestic maid service in Sheffield. We offer fully insured, guaranteed cleans through our unique online booking system. We want to take the hassle out of booking a domestic house cleaning, while giving you the best possible service.
+
+      .col-md-4.md-margin-bottom-40
+        .headline
+          %h2 Latest Tweets
+        %a.twitter-timeline{:href => 'https://twitter.com/MaidinSheff', :data => {:widget_id => '504687508127379456', :chrome => 'noheader transparent noscrollbar nofooter'}} Tweets by @MaidinSheff
+        :plain
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+      .col-md-4
+        = render 'shared/contact_details'
+
+.copyright
+  .container
+    .row
+      .col-md-8
+        %p
+          &copy; 2014 BRD 22 OY Services ltd, trading as "Maid In Sheffield". All Rights Reserved.<br>
+          = link_to('Our Privacy Policy', privacy_policy_path)
+          = link_to('Terms Of Service', tos_path)
+
+      .col-md-4
+        #logo-footer.pull-right
+          = link_to(image_tag('mis-banner-small.png', alt: 'Logo'), root_path)

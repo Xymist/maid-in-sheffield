@@ -1,0 +1,27 @@
+.headline
+  %h2 Contact Us
+= link_to 'Contact Form', contact_path
+<br><br>
+%address.md-margin-bottom-40
+  BRD 22 OY Services ltd,<br>T/A "Maid In Sheffield"<br>
+  25 Toftwood Road <br>
+  Sheffield <br>
+  South Yorkshire <br>
+  S10 1SJ <br>
+  <br>
+  Phone: 0114 2676 137 <br>
+  <br>
+  Email:
+  = link_to 'mailto: maidinsheffield@maidinsheffield.co.uk' do
+    maidinsheffield@maidinsheffield.co.uk
+
+%ul.list-unstyled.list-inline.team-socail
+  %li
+    = link_to 'https://www.facebook.com/maidinsheffield' do
+      %i.fa.fa-facebook
+  %li
+    = link_to 'https://www.twitter.com/maidinsheff' do
+      %i.fa.fa-twitter
+  %li
+    = link_to 'http://www.yell.com/biz/maid-in-sheffield-sheffield-8092836' do
+      %i.fa.fa-google-plus

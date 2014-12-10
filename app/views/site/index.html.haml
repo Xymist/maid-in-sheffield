@@ -1,0 +1,132 @@
+#frontslider.owl-carousel.owl-theme
+
+  .item= image_tag('slider_1.jpg')
+  .item= image_tag('slider_2.jpg')
+  .item= image_tag('slider_3.jpg')
+
+#slidertext.col-xs-12
+  Introducing Maid In Sheffield <br><small>A professional maid service, with made in Sheffield quality</small>
+  .col-xs-6.col-xs-offset-3
+    = link_to('Who Are We?', about_us_path, :class => 'btn-u btn-brd btn-brd-hover btn-u-light btn-top-buffered')
+    = link_to('Book Online', booking_form_path, :class => 'btn-u btn-brd btn-brd-hover btn-u-light btn-top-buffered')
+
+.purchase
+  .container
+    .row
+      .col-xs-6.col-xs-offset-3.animated.fadeInLeft
+        .row
+          %h1 BOOK WITH US IN 60 SECONDS!
+          %form{:action => '../postcodes.php', :method => 'post'}
+            .col-xs-7.col-xs-offset-1
+              %input{:type => 'text', :name => 'postcode', :placeholder => 'Post Code'}
+            .col-xs-4= link_to('Book Now!', price_grid_path, :type => 'button', :class => 'btn btn-success')
+
+.container.content
+  .row.margin-bottom-30
+    .col-md-4
+      %h4 Elite service
+      %ul.list-unstyled.margin-bottom-20
+        %li
+          %i.fa.fa-check.color-green
+          Professional, background checked teams
+        %li
+          %i.fa.fa-check.color-green
+          Quick and easy online booking
+        %li
+          %i.fa.fa-check.color-green
+          No minimum recurring contracts
+        %li
+          %i.fa.fa-check.color-green
+          Satisfaction guaranteed
+
+    .col-md-4
+      %h4 Clean & Green
+      %ul.list-unstyled.margin-bottom-20
+        %li
+          %i.fa.fa-check.color-green
+          Green and eco friendly cleaning products
+        %li
+          %i.fa.fa-check.color-green
+          The safest clean possible to protect your family and pets
+        %li
+          %i.fa.fa-check.color-green
+          Special requests? We'll make it happen!
+        %li
+          %i.fa.fa-check.color-green
+          Fully insured to protect your home
+
+    .col-md-4
+      %h4 Easily Available
+      %ul.list-unstyled.margin-bottom-20
+        %li
+          %i.fa.fa-check.color-green
+          Book online in 60 seconds
+        %li
+          %i.fa.fa-check.color-green
+          Flat rate pricing; no need to describe your house to us.
+        %li
+          %i.fa.fa-check.color-green
+          No need for a quote, just pick your slot and we'll turn up, rain or shine!
+        %li
+          %i.fa.fa-check.color-green
+          Simple, easy to understand packages
+
+    .row.margin-bottom-30
+      .col-md-12.md-margin-bottom-40
+        .headline
+          %h2 Why Use Maid In Sheffield?
+        .row
+          .col-sm-4
+            = image_tag('mis-transparent-medium.png', class: 'img-responsive margin-bottom-20')
+          .col-sm-8
+            %p Our mission is to simplify your life by offering convenient and an exceptional quality domestic house cleaning and maid service in Sheffield and the surrounding area. We offer a variety of services and guarantee all work or your money back
+            %ul.list-unstyled.margin-bottom-20
+              %li
+                %i.fa.fa-thumbs-up.color-green
+                We don't require a minimum contract; we can do one off emergency cleans or routine cleans, its completely up to you.
+              %li
+                %i.fa.fa-thumbs-up.color-green
+                We're competitive on price because we don't work slowly to make up the hours. Your clean will take approximately 2-3 hours and we send a team of two maids to make sure you get the best clean possible.
+              %li
+                %i.fa.fa-thumbs-up.color-green
+                We only use green and Eco-friendly cleaning products to make sure that our cleans are safe for your family and your pets. We specialise in hypo-allergenic cleaning and we can ensure any special requests are carried out.
+              %li
+                %i.fa.fa-thumbs-up.color-green
+                If you're not happy with your service, we send a team out to make it right. If you're still not happy enough to recommend us to a friend, we offer a full refund.
+              %li
+                %i.fa.fa-thumbs-up.color-green
+                Our uniformed staff are fully insured and background checked to make you feel safe about using our service.
+
+      .col-sm-12
+        .headline
+          %h2 How It Works
+        .col-xs-12{:style => 'text-align: center'}= image_tag('simple_service.png')
+        .col-md-4.col-xs-12= link_to(image_tag('pick_service.png'), price_grid_path)
+        .col-md-4.col-xs-12= link_to(image_tag('book_service.png'), booking_form_path)
+        .col-md-4.col-xs-12= link_to(image_tag('enjoy_service.png'), testimonials_path)
+
+      .col-xs-12.thumbnail-style
+        #lieslider.owl-carousel.owl-theme
+          .item
+            %h3 <br>"Thank you for organising a brilliant clean this morning for my son's flat in Bents Green. <br> A wonderful service and we will use you again soon." <br> - Judi J
+          .item
+            %h3 <br>"A perfect clean and all the windows look lovely!<br>So impressed with what you were able to do in a short time frame." <br> - Helen E, Hillsborough
+          .item
+            %h3 <br>"I was a bit hesitant at first to go with a website I'd not used before, <br>but the checklist made it clear what I was getting, and it all worked out great!" <br> - James P, Totley
+
+#call-to-action.container-fluid
+  .col-xs-6{:style => 'text-align: right;'}
+    %h1{:style => 'color: white; padding-top: 20px; padding-bottom: 10px;'} Ready To Book?
+  .col-xs-6
+    = link_to 'Book Now', booking_form_path, :class => 'btn-u btn-brd btn-brd-hover btn-u-light btn-pale-buffered'
+    = link_to 'Services & Pricing', price_grid_path, :class => 'btn-u btn-brd btn-brd-hover btn-u-light btn-pale-buffered'
+
+#featured-in.container-fluid
+  .col-xs-2.col-xs-offset-1= image_tag('fe1.png')
+  .col-xs-2= image_tag('fe3.png')
+  .col-xs-2= image_tag('fe4.png')
+  .col-xs-2= image_tag('fe5.png')
+  .col-xs-2= image_tag('thestar.png')
+
+= render partial: 'shared/sliders'
+= render partial: 'shared/purechat'

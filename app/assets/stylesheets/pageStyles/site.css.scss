@@ -4,10 +4,15 @@
     height: auto;
 }
 
+#frontslider{
+  position: relative;
+  width: 100%
+}
 #slidertext {
    position:absolute; 
    top: 100px;
-   color: white; 
+   color: white;
+   text-align: center;
    font-size: 40px; 
    letter-spacing: -1px;  
    padding: 10px;
@@ -34,6 +39,7 @@
     background-image: -o-linear-gradient(270deg,rgba(204,204,204,1.00) 0%,rgba(192,192,192,1.00) 48.19%,rgba(204,204,204,1.00) 100%);
     background-image: linear-gradient(180deg,rgba(204,204,204,1.00) 0%,rgba(192,192,192,1.00) 48.19%,rgba(204,204,204,1.00) 100%);
     bottom: 10px;
+    text-align: center;
 }
 
 #call-to-action{
@@ -69,4 +75,21 @@
   h4{
     text-align: center;
   }
+}
+
+.flashies-red{
+  color: red;
+  text-align: center;
+}
+
+.flashies-green{
+  color: green;
+  text-align: center;
+}
+
+#floatheader{
+  position: fixed;
+  width: 100%;
+  background: #FFFFFF;
+  z-index: 10
 }
