@@ -18,10 +18,12 @@
       .col-xs-6.col-xs-offset-3.animated.fadeInLeft
         .row
           %h1 BOOK WITH US IN 60 SECONDS!
-          %form{:action => '../postcodes.php', :method => 'post'}
+          %form{:action => '/booking_form', :method => 'post'}
+            %input{:name => 'authenticity_token', :type => 'hidden', :value => form_authenticity_token}
             .col-xs-7.col-xs-offset-1
               %input{:type => 'text', :name => 'postcode', :placeholder => 'Post Code'}
-            .col-xs-4= link_to('Book Now!', price_grid_path, :type => 'button', :class => 'btn btn-success')
+            .col-xs-4
+              %input{:name => 'commit', :type => 'submit', :value => 'Book Now!', :class => 'btn btn-success'}
 
 .container.content
   .row.margin-bottom-30
@@ -102,10 +104,10 @@
       .col-sm-12
         .headline
           %h2 How It Works
-        .col-xs-12{:style => 'text-align: center'}= image_tag('simple_service.png')
-        .col-md-4.col-xs-12= link_to(image_tag('pick_service.png'), price_grid_path)
-        .col-md-4.col-xs-12= link_to(image_tag('book_service.png'), booking_form_path)
-        .col-md-4.col-xs-12= link_to(image_tag('enjoy_service.png'), testimonials_path)
+        .col-xs-12{:style => 'text-align: center'}= image_tag('simple_service.png', alt: 'Simple, three-step process')
+        .col-md-4.col-xs-12= link_to(image_tag('pick_service.png', alt: 'One:  Select your service'), price_grid_path)
+        .col-md-4.col-xs-12= link_to(image_tag('book_service.png', alt: 'Two: Book via our online form'), booking_form_path)
+        .col-md-4.col-xs-12= link_to(image_tag('enjoy_service.png', alt: 'Three: Enjoy your fabulous clean'), testimonials_path)
 
       .col-xs-12.thumbnail-style
         #lieslider.owl-carousel.owl-theme
@@ -124,11 +126,11 @@
     = link_to 'Services & Pricing', price_grid_path, :class => 'btn-u btn-brd btn-brd-hover btn-u-light btn-pale-buffered'
 
 #featured-in.container-fluid
-  .col-xs-2.col-xs-offset-1= image_tag('fe1.png')
-  .col-xs-2= image_tag('fe3.png')
-  .col-xs-2= image_tag('fe4.png')
-  .col-xs-2= image_tag('fe5.png')
-  .col-xs-2= image_tag('thestar.png')
+  .col-xs-2.col-xs-offset-1.featuredin= link_to(image_tag('fe1.png', alt: 'Google Plus'), 'https://plus.google.com/110895358130904379318/about')
+  .col-xs-2.featuredin= link_to(image_tag('fe3.png', alt: 'Facebook'), 'https://www.facebook.com/maidinsheffield')
+  .col-xs-2.featuredin= link_to(image_tag('fe4.png', alt: 'Yell'), 'http://www.yell.com/biz/maid-in-sheffield-sheffield-8092836/')
+  .col-xs-2.featuredin= link_to(image_tag('fe5.png', alt: 'Twitter'),'https://twitter.com/MaidinSheff')
+  .col-xs-2.featuredin= link_to(image_tag('thestar.png', alt: 'The Sheffield Star'),'')
 
 = render partial: 'shared/sliders'
 = render partial: 'shared/purechat'

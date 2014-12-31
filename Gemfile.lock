@@ -154,6 +154,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  actionmailer
   coffee-rails (~> 4.0.0)
   devise
   font-awesome-rails
@@ -162,6 +163,7 @@ DEPENDENCIES
   haml-rails
   jbuilder (~> 2.0)
   jquery-rails
+  mail
   mailchimp-api
   owlcarousel-rails
   pg

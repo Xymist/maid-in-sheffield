@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   
   get '/about_us' => 'site#about_us'
   get '/booking_form' => 'site#booking_form'
+  post '/booking_form' => 'site#booking_form'
   get '/client_login' => 'site#client_login'
   get '/faq' => 'site#faq'
   get '/price_grid' => 'site#price_grid'

@@ -34,24 +34,30 @@
       %h2 The Team
     .col-xs-12
       <!--<div class="col-xs-4">picture goes here</div>-->
-      .col-xs-8.col-xs-offset-2
+      .col-xs-8.col-xs-offset-2{:itemscope => true, :itemtype => 'http://schema.org/Person'}
         %h3 Emma & Kelly
         %p Emma and Kelly are Sheffield born and bred. They do an amazing job and always go the extra mile to make sure our customers are as happy as possible.  They are what make Maid In Sheffield so special, they offer the convenient domestic cleaning service that people are used to, while doing it in a new and exciting way.
 
   .headline
     %h2 The Directors
   .row.team
-    .col-xs-4
+    .col-xs-4{:itemscope => true, :itemtype => 'http://schema.org/Person'}
       .thumbnail-style
-        %h3 Henry Rackley <br> <small>Managing Director<br><br></small>
-        %p Henry is the Managing Director of Maid In Sheffield and makes sure the day to day running of the company goes smoothly. Having helped run a family manufacturing business from a young age, he recently moved to Sheffield and is keen to take on the challenge of building the best domestic maid service in the area.
+        %h3 Henry Rackley <br> <small>Managing Director<br><br></small><br>
+        %p Henry is the Managing Director of Maid In Sheffield and makes sure the day to day running of the company goes smoothly. Having helped run a family manufacturing business from a young age, he recently moved to Sheffield to take on the challenge of building the best domestic maid service in the area.
+        = link_to 'http://uk.linkedin.com/pub/henry-rackley/9a/6aa/a74' do
+          %i.fa.fa-2x.fa-linkedin-square
 
-    .col-xs-4
+    .col-xs-4{:itemscope => true, :itemtype => 'http://schema.org/Person'}
       .thumbnail-style
         %h3 James Duerden<br> <small>Technical Director<br><br></small><br>
-        %p James maintains our website and keeps all the technical services running. Before coming to Maid In Sheffield as our Technical Director he was the technical officer for an independent wine merchant.
+        %p James maintains our website and keeps all the technical services running, ensuring our service is fast and available. Before coming to Maid In Sheffield as our Technical Director he was the technical officer and web administrator for an independent wine merchant.
+        = link_to 'uk.linkedin.com/in/jamesduerden' do
+          %i.fa.fa-2x.fa-linkedin-square
 
-    .col-xs-4
+    .col-xs-4{:itemscope => true, :itemtype => 'http://schema.org/Person'}
       .thumbnail-style
         %h3 Joseph Basquill<br> <small>Operations Director<br><br></small><br>
         %p Joseph hires our excellent maid teams and it’s his job to make sure everything runs smoothly behind the scenes to ensure you receive the best service possible. Having previously worked in the energy and tourism industries, he now joins Maid In Sheffield as our Director of Operations.
+        = link_to 'http://uk.linkedin.com/pub/joseph-basquill/54/470/672' do
+          %i.fa.fa-2x.fa-linkedin-square
