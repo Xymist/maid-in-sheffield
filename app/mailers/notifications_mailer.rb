@@ -1,5 +1,5 @@
 class NotificationsMailer < ActionMailer::Base
-  default :from => 'maidinsheffield@maidinsheffield.co.uk'
+  default :from => 'contact-form@maidinsheffield.co.uk'
   default :to => 'maidinsheffield@maidinsheffield.co.uk'
 
   def new_message(message)
