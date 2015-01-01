@@ -81,7 +81,7 @@
           %h2 Why Use Maid In Sheffield?
         .row
           .col-sm-4
-            = image_tag('mis-transparent-medium.png', class: 'img-responsive margin-bottom-20')
+            = image_tag('mis-transparent-medium.png', class: 'img-responsive margin-bottom-20', alt: 'Maid In Sheffield Logo')
           .col-sm-8
             %p Our mission is to simplify your life by offering convenient and an exceptional quality domestic house cleaning and maid service in Sheffield and the surrounding area. We offer a variety of services and guarantee all work or your money back
             %ul.list-unstyled.margin-bottom-20
@@ -111,12 +111,18 @@
 
       .col-xs-12.thumbnail-style
         #lieslider.owl-carousel.owl-theme
-          .item
-            %h3 <br>"Thank you for organising a brilliant clean this morning for my son's flat in Bents Green. <br> A wonderful service and we will use you again soon." <br> - Judi J
-          .item
-            %h3 <br>"A perfect clean and all the windows look lovely!<br>So impressed with what you were able to do in a short time frame." <br> - Helen E, Hillsborough
-          .item
-            %h3 <br>"I was a bit hesitant at first to go with a website I'd not used before, <br>but the checklist made it clear what I was getting, and it all worked out great!" <br> - James P, Totley
+          .item{:itemscope => true, :itemtype => 'http://data-vocabulary.org/Review'}
+            %h3
+              %span{:itemprop => 'description'} <br>"Thank you for organising a brilliant clean this morning for my son's flat in Bents Green. <br> A wonderful service and we will use you again soon." <br> -
+              %span{:itemprop => 'reviewer'}Judi J
+          .item{:itemscope => true, :itemtype => 'http://data-vocabulary.org/Review'}
+            %h3
+              %span{:itemprop => 'description'} <br>"A perfect clean and all the windows look lovely!<br>So impressed with what you were able to do in a short time frame." <br> -
+              %span{:itemprop => 'reviewer'}Helen E, Hillsborough
+          .item{:itemscope => true, :itemtype => 'http://data-vocabulary.org/Review'}
+            %h3
+              %span{:itemprop => 'description'} <br>"I was a bit hesitant at first to go with a website I'd not used before, <br>but the checklist made it clear what I was getting, and it all worked out great!" <br> -
+              %span{:itemprop => 'reviewer'}James P, Totley
 
 #call-to-action.container-fluid
   .col-xs-6{:style => 'text-align: right;'}
