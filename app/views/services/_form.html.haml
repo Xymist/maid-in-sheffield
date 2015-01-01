@@ -1,0 +1,31 @@
+= form_for @service do |f|
+  - if @service.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@service.errors.count, 'error')} prohibited this service from being saved:"
+      %ul
+        - @service.errors.full_messages.each do |msg|
+          %li= msg
+  %h4 Availabilities are 'true' or 'false'!
+  .field
+    = f.label :name
+    <br>
+    = f.text_field :name
+  .field
+    = f.label :bronze_available
+    <br>
+    = f.text_field :bronze
+  .field
+    = f.label :silver_available
+    <br>
+    = f.text_field :silver
+  .field
+    = f.label :gold_available
+    <br>
+    = f.text_field :gold
+  .field
+    = f.label :number
+    <br>
+    = f.number_field :number
+
+  .actions
+    = f.submit 'Save'

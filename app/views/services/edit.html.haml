@@ -1,0 +1,10 @@
+.container
+  %h1.pull-left.headline <br>Edit Service
+
+.container.content
+  .col-md-8.col-md-offset-2{:style => 'height: 600px;'}
+    = render 'form'
+  .col-md-8.col-md-offset-2{:style => 'height: 30px;'}
+    = link_to 'Show', @service
+    \|
+    = link_to 'Back', services_path

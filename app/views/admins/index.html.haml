@@ -1,0 +1,19 @@
+.container
+  %h1 Listing Admins
+
+.container.content
+  %table
+    %thead
+      %tr
+        %th ID
+        %th Email
+        %th
+        %th
+
+    %tbody
+      - @admins.each do |admin|
+        %tr
+          %td=admin.id
+          %td=admin.email
+          %td= link_to 'Edit Email', edit_admin_path(admin)
+          %td= link_to 'Delete', admin, :method => :delete, :data => { :confirm => 'Are you sure?' }

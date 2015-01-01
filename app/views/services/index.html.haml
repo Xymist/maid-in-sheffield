@@ -1,0 +1,31 @@
+.container
+  %h1 Listing Services
+
+.container.content
+  %table
+    %thead
+      %tr
+        %th ID
+        %th Name
+        %th Bronze?
+        %th Silver?
+        %th Gold?
+        %th Number
+        %th
+        %th
+
+    %tbody
+      - @services.each do |service|
+        %tr
+          %td=service.id
+          %td=service.name
+          %td=service.bronze
+          %td=service.silver
+          %td=service.gold
+          %td=service.number
+          %td= link_to 'Edit', edit_service_path(service)
+          %td= link_to 'Destroy', service, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+  %br
+
+  = link_to 'New service', new_service_path

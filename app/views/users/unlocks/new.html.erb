@@ -1,0 +1,26 @@
+<div class='container'>
+  <h1 class='pull-left headline'><br>Resend unlock instructions</h1>
+</div>
+
+<div class='container content'>
+    <div class='col-xs-12'>
+        <div class='row' style='height: 220px;'>
+            <%= form_for(resource, as: resource_name, url: unlock_path(resource_name), html: { method: :post }) do |f| %>
+            <%= devise_error_messages! %>
+
+            <div class="field">
+                <%= f.label :email %><br />
+                <%= f.email_field :email, autofocus: true %>
+            </div>
+
+            <div class="actions">
+                <%= f.submit "Resend unlock instructions" %>
+            </div>
+            <% end %>
+        </div>
+        <div class='row' style='height: 20px;'>
+            <%= render 'devise/shared/links' %>
+        </div>
+    </div>
+</div>
+

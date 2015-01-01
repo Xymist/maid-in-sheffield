@@ -1,0 +1,18 @@
+%p#notice= notice
+.container
+  %h1.pull-left.headline <br>Existing User
+
+.container.content
+  .col-md-8.col-md-offset-2{:style => 'height: 600px;'}
+
+    %p
+      <strong>ID:</strong>
+      = @user.id
+
+    %p
+      <strong>Email:</strong>
+      = @user.email
+
+= link_to 'Edit', edit_user_path(@user)
+\|
+= link_to 'Back', users_path
