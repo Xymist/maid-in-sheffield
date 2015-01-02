@@ -25,6 +25,7 @@ gem 'mail'
 gem 'actionmailer'
 gem 'dragonfly'
 gem 'dragonfly-s3_data_store'
+gem 'dragonfly-dropbox_data_store'
 group :production do
     gem 'rack-cache', :require => 'rack/cache'
 end
