@@ -1,38 +1,9 @@
 <div class='container'>
-  <h1 class='pull-left headline'><br>Sign Up</h1>
+  <h1 class='pull-left headline'><br>New Admin</h1>
 </div>
 
 <div class='container content'>
-    <div class='col-xs-12'>
-      <div class='row' style='height: 320px;'>
-        <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-          <%= devise_error_messages! %>
-
-          <div class='field'>
-            <%= f.label :email %><br />
-            <%= f.email_field :email, autofocus: true %>
-          </div>
-
-          <div class='field'>
-            <%= f.label :password %>
-            <% if @validatable %>
-            <em>(<%= @minimum_password_length %> characters minimum)</em>
-            <% end %><br />
-            <%= f.password_field :password, autocomplete: "off" %>
-          </div>
-
-          <div class='field'>
-            <%= f.label :password_confirmation %><br />
-            <%= f.password_field :password_confirmation, autocomplete: "off" %>
-          </div>
-
-          <div class="actions">
-            <%= f.submit 'Sign up' %>
-          </div>
-        <% end %>
-      </div>
-      <div class='row' style='height: 20px;'>
-        <%= render 'devise/shared/links' %>
-      </div>
-    </div>
+  <div class="col-xs-12">
+    <h1>We are not currently accepting new administrators</h1>
+  </div>
 </div>

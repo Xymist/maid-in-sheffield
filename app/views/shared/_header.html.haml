@@ -8,11 +8,12 @@
 
         .col-xs-10
           %ul.loginbar.pull-right
-            %li.topbar-devider
-            %li= link_to 'FAQ', faq_path
-            %li.topbar-devider
-            %li= link_to 'Contact Us', contact_path
+
             - if user_signed_in?
+              %li.topbar-devider
+              %li= link_to 'FAQ', faq_path
+              %li.topbar-devider
+              %li= link_to 'Contact Us', contact_path
               %li.topbar-devider
               %li= current_user.email
               %li= link_to('Edit Profile', edit_user_registration_path)
@@ -27,9 +28,13 @@
               %li= link_to('See Users', users_path)
               %li.topbar-devider
               %li= link_to('Log Out', destroy_admin_session_path, method: :delete)
-            //- else
-            //  %li.topbar-devider
-            //  %li= link_to('Client Login', new_user_session_path)
+            - else
+              %li.topbar-devider
+              %li= link_to 'FAQ', faq_path
+              %li.topbar-devider
+              %li= link_to 'Contact Us', contact_path
+              %li.topbar-devider
+              %li= link_to('Login/Sign Up', sign_in_path)
 
       .navbar-header
         %button.navbar-toggle{:type => 'button', :data => {:toggle => 'collapse', :target => '.navbar-responsive-collapse'}}
