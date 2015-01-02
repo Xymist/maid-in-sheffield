@@ -13,8 +13,6 @@
               %li.topbar-devider
               %li= link_to 'FAQ', faq_path
               %li.topbar-devider
-              %li= link_to 'Contact Us', contact_path
-              %li.topbar-devider
               %li= current_user.email
               %li= link_to('Edit Profile', edit_user_registration_path)
               %li.topbar-devider
@@ -25,7 +23,7 @@
               %li.topbar-devider
               %li= link_to('Edit Services', services_path)
               %li.topbar-devider
-              %li= link_to('See Users', users_path)
+              %li= link_to('See Applicants', users_path)
               %li.topbar-devider
               %li= link_to('Log Out', destroy_admin_session_path, method: :delete)
             - else
@@ -33,6 +31,8 @@
               %li= link_to 'FAQ', faq_path
               %li.topbar-devider
               %li= link_to 'Contact Us', contact_path
+              %li.topbar-devider
+              %li= link_to 'Gift Cards', gift_cards_path
               %li.topbar-devider
               %li= link_to('Login/Sign Up', 'https://maidinsheffield.launch27.com/signup')
 

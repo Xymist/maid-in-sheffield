@@ -1,0 +1,14 @@
+<div class="container content">
+<h1>List of CVs</h1>
+
+<ul class="row" id="cvs-list">
+  <% @cvs.each do |cv| %>
+      <li class="col-xs-3">
+        <a href="<%=cv.cv%>">Download CV</a>
+        <p><%= cv.name %></p>
+      </li>
+  <% end %>
+</ul>
+
+<%= link_to 'Add your CV', new_cv_path, class: 'btn btn-lg btn-primary' %>
+</div>
