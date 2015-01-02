@@ -1,46 +1,62 @@
 <title>Cleaning Price List</title>
 <div class="container">
-<h1 class="pull-left headline"><br>Services & Pricing</h1>
+  <h1 class="pull-left headline"><br>Services & Pricing</h1>
 </div>
 <div class="container content">
-    <div class="row">
-        <div class="col-xs-12 thumbnail-style">
-            <div class="headline"><h4>Our Cleaning Services</h4></div>
-            <ul class="list-unstyled margin-bottom-20">
-                <li><i class="fa fa-asterisk color-green"></i> Bronze is our standard Clean; a light clean for the most important areas of your home.</li><br>
-                <li><i class="fa fa-asterisk color-green"></i> Silver is our Deep Clean; a thorough clean that is easy to keep up with, this is our recommended service for first time customers.</li><br>
-                <li><i class="fa fa-asterisk color-green"></i> Gold is our End of Tenancy or Move in/Out Clean; this involves spot cleaning of walls and skirting boards, dusting all of the furniture and inside cabinets, drawers and closets to make sure your home is spotless.</li>
-            </ul>
-        </div>
-        <div class="col-xs-12 thumbnail-style">
-            <div class="headline"><h4>Always Included:</h4></div>
-            <ul class="list-unstyled margin-bottom-20">
-                <li><i class="fa fa-asterisk color-green"></i> A trained team of two cleaners to make sure you get the best clean possible.</li>
-                <li><i class="fa fa-asterisk color-green"></i> All cleaning supplies and tools, including vacuum cleaner.</li>
-                <li><i class="fa fa-asterisk color-green"></i> Unparalleled customer service by email, live-chat and telephone.</li>
-                <li><i class="fa fa-asterisk color-green"></i> 100% satisfaction guarantee</li>
-                <li><i class="fa fa-asterisk color-green"></i> Full public liability insurance up to £2,000,000, including coverage of the excess in the unlikely event of a mishap.</li>
-                <li><i class="fa fa-asterisk color-green"></i> Discounts for regular cleanings: 15% for weekly, 10% for fortnightly, and 5% for monthly service.</li>
-            </ul>
-        </div>
+  <div class="row">
+    <div class="col-xs-12 thumbnail-style">
+      <div class="headline"><h4>Our Cleaning Services</h4></div>
+      <ul class="list-unstyled margin-bottom-20">
+        <li><i class="fa fa-asterisk color-green"></i> Bronze is our standard Clean; a light clean for the most
+          important areas of your home.
+        </li>
+        <br>
+        <li><i class="fa fa-asterisk color-green"></i> Silver is our Deep Clean; a thorough clean that is easy to keep
+          up with, this is our recommended service for first time customers.
+        </li>
+        <br>
+        <li><i class="fa fa-asterisk color-green"></i> Gold is our End of Tenancy or Move in/Out Clean; this involves
+          spot cleaning of walls and skirting boards, dusting all of the furniture and inside cabinets, drawers and
+          closets to make sure your home is spotless.
+        </li>
+      </ul>
     </div>
+    <div class="col-xs-12 thumbnail-style">
+      <div class="headline"><h4>Always Included:</h4></div>
+      <ul class="list-unstyled margin-bottom-20">
+        <li><i class="fa fa-asterisk color-green"></i> A trained team of two cleaners to make sure you get the best
+          clean possible.
+        </li>
+        <li><i class="fa fa-asterisk color-green"></i> All cleaning supplies and tools, including vacuum cleaner.</li>
+        <li><i class="fa fa-asterisk color-green"></i> Unparalleled customer service by email, live-chat and telephone.
+        </li>
+        <li><i class="fa fa-asterisk color-green"></i> 100% satisfaction guarantee</li>
+        <li><i class="fa fa-asterisk color-green"></i> Full public liability insurance up to £2,000,000, including
+          coverage of the excess in the unlikely event of a mishap.
+        </li>
+        <li><i class="fa fa-asterisk color-green"></i> Discounts for regular cleanings: 15% for weekly, 10% for
+          fortnightly, and 5% for monthly service.
+        </li>
+      </ul>
+    </div>
+  </div>
   <div id="bookbuttons" class="row">
     <div class="col-xs-12 price-row">
       <div class="col-xs-3 col-sm-3">
         <br><h4><strong>House Size</strong></h4>
       </div>
       <div class="col-xs-3 col-sm-3">
-        <%=link_to('<h5><strong>Bronze Service</strong> <br> Book Now</h5>'.html_safe, booking_form_path, :type => 'button', :class => 'btn btn-bronze')%>
+        <%= link_to('<h5><strong>Bronze Service</strong> <br> Book Now</h5>'.html_safe, booking_form_path, :type => 'button', :class => 'btn btn-bronze') %>
       </div>
       <div class="col-xs-3 col-sm-3">
-        <%=link_to('<h5><strong>Silver Service</strong> <br> Book Now</h5>'.html_safe, booking_form_path, :type => 'button', :class => 'btn btn-silver')%>
+        <%= link_to('<h5><strong>Silver Service</strong> <br> Book Now</h5>'.html_safe, booking_form_path, :type => 'button', :class => 'btn btn-silver') %>
       </div>
       <div class="col-xs-3 col-sm-3">
-        <%=link_to('<h5><strong>Gold Service</strong> <br> Book Now</h5>'.html_safe, booking_form_path, :type => 'button', :class => 'btn btn-gold')%>
+        <%= link_to('<h5><strong>Gold Service</strong> <br> Book Now</h5>'.html_safe, booking_form_path, :type => 'button', :class => 'btn btn-gold') %>
       </div>
     </div>
   </div>
-  
+
   <div id="servicetype" class="row">
     <div class="col-xs-5 col-sm-3">
       <h4><strong>House Size</strong></h4>
@@ -55,32 +71,33 @@
       <h5><strong>G</strong></h5>
     </div>
   </div>
-  
+
   <div id="pricetable" class="col-xs-12">
     <% @prices.each do |home| %>
-      <div class="row">
-        <div class="col-xs-12 price-row" id="<%= home.size %>">
-          <div class="col-xs-5 col-sm-3">
-            <h5><strong><%= home.size %> Home</strong></h5>
-          </div>
-          <div class="col-xs-2 col-sm-3">
-            <h6>£<%= home.bronze_price %></h6>
-          </div>
-          <div class="col-xs-2 col-sm-3">
-            <h6>£<%= home.silver_price %></h6>
-          </div>
-          <div class="col-xs-2 col-sm-3">
-            <h6>£<%= home.gold_price %></h6>
+        <div class="row">
+          <div class="col-xs-12 price-row" id="<%= home.size %>">
+            <div class="col-xs-5 col-sm-3">
+              <h5><strong><%= home.size %> Home</strong></h5>
+            </div>
+            <div class="col-xs-2 col-sm-3">
+              <h6>£<%= home.bronze_price %></h6>
+            </div>
+            <div class="col-xs-2 col-sm-3">
+              <h6>£<%= home.silver_price %></h6>
+            </div>
+            <div class="col-xs-2 col-sm-3">
+              <h6>£<%= home.gold_price %></h6>
+            </div>
           </div>
         </div>
-      </div>
     <% end %>
   </div>
-  
+
   <div class="row">
-  	<p style="text-align: center">Please include bedrooms that have been converted into offices into your total number of bedrooms for your home.</p>
+    <p style="text-align: center">Please include bedrooms that have been converted into offices into your total number
+      of bedrooms for your home.</p>
   </div>
-  
+
   <div id="discounttitles" class="row" style="padding-top: 40px">
     <div class="col-xs-12 price-row price-row-pale price-row-top">
       <div class="col-xs-4">
@@ -94,7 +111,7 @@
       </div>
     </div>
   </div>
-  
+
   <div id="discountnumbers" class="row">
     <div class="col-xs-12 price-row price-row-dark price-row-bottom">
       <div class="col-xs-4">
@@ -108,22 +125,37 @@
       </div>
     </div>
   </div>
-  
+
   <div id="serviceiterator">
     <% @services.each do |service| %>
         <div class="row">
-          <div class="col-xs-12 price-row #{<% if service.id%2==0 %> price-row-dark <% else %> price-row-pale <% end %>} #{<% if service.number==@firstservice.number %> price-row-top <% elsif service.number==@lastservice.number %> price-row-bottom <% end %>}">
+          <div class="col-xs-12 price-row #{
+            <% if service.id%2==0 %> price-row-dark
+            <% else %> price-row-pale
+            <% end %>} #{
+            <% if service.number==@firstservice.number %> price-row-top
+            <% elsif service.number==@lastservice.number %> price-row-bottom
+            <% end %>}">
             <div class="col-xs-5 col-sm-3">
-              <h6><strong><%= service.name%></strong></h6>
+              <h6><strong><%= service.name %></strong></h6>
             </div>
             <div class="col-xs-2 col-sm-3 col-bronze">
-              <% if service.bronze=='true' %> <i class="fa fa-check"> <% elsif service.bronze=='null' %> <i> <% else %> <i class="fa fa-minus color-grey"> <% end %></i>
+              <% if service.bronze=='true' %> <i class="fa fa-check">
+              <% elsif service.bronze=='null' %> <i>
+              <% else %> <i class="fa fa-minus color-grey">
+              <% end %></i>
             </div>
             <div class="col-xs-2 col-sm-3 col-silver">
-              <% if service.silver=='true' %> <i class="fa fa-check"> <% elsif service.bronze=='null' %> <i> <% else %> <i class="fa fa-minus color-grey"> <% end %></i>
+              <% if service.silver=='true' %> <i class="fa fa-check">
+              <% elsif service.bronze=='null' %> <i>
+              <% else %> <i class="fa fa-minus color-grey">
+              <% end %></i>
             </div>
             <div class="col-xs-2 col-sm-3 col-gold">
-              <% if service.gold=='true' %> <i class="fa fa-check"> <% elsif service.bronze=='null' %> <i> <% else %> <i class="fa fa-minus color-grey"> <% end %></i>
+              <% if service.gold=='true' %> <i class="fa fa-check">
+              <% elsif service.bronze=='null' %> <i>
+              <% else %> <i class="fa fa-minus color-grey">
+              <% end %></i>
             </div>
           </div>
         </div>
