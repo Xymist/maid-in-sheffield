@@ -3,14 +3,19 @@
 </div>
 
 <div class='container content'>
+
     <div class='col-xs-12'>
-      <div class='row' style='height: 320px;'>
+      <div class='row' style='height: 500px;'>
         <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
           <%= devise_error_messages! %>
 
           <div class='field'>
+            <%= f.label :name %><br />
+            <%= f.text_field :name, autofocus: true %>
+          </div>
+          <div class='field'>
             <%= f.label :email %><br />
-            <%= f.email_field :email, autofocus: true %>
+            <%= f.email_field :email%>
           </div>
 
           <div class='field'>
@@ -31,8 +36,8 @@
           </div>
         <% end %>
       </div>
-      <div class='row' style='height: 20px;'>
-        <%= render 'devise/shared/links' %>
-      </div>
+      <h4>
+        <%=link_to('Already applied?', sign_in_path)%>
+      </h4>
     </div>
 </div>

@@ -5,6 +5,7 @@ Rails.application.routes.draw do
 
   devise_scope :user do
       get 'sign_in', to: 'users/sessions#new'
+      get 'join_us', to: 'users/registrations#new'
   end
 
   resources :homes
@@ -17,7 +18,8 @@ Rails.application.routes.draw do
   
   get 'contact', to: 'contact#new'
   post 'contact', to: 'contact#create'
-  
+
+  get '/upload_cv' => 'cvs#new'
   get '/about_us' => 'site#about_us'
   get '/booking_form' => 'site#booking_form'
   post '/booking_form' => 'site#booking_form'

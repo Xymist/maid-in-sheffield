@@ -3,28 +3,27 @@
 
 .container.content
   .col-xs-12
-    .row{:style => 'height: 400px;'}
+    .row{:style => 'height: 700px'}
       = form_for(resource, as: resource_name, url: registration_path(resource_name), html: {method: :put}) do |f|
         = devise_error_messages!
+
         .field
-          = f.label :email <br>
+          = f.label :name
+          <br>
+          = f.text_field :name
+
+        .field
+          = f.label :email
+          <br>
           = f.email_field :email, autofocus: true
 
-        - if devise_mapping.confirmable? && resource.pending_reconfirmation?
-          %p Currently waiting confirmation for: <%= resource.unconfirmed_email
-
         .field
-          = f.label :password
-          %i "(leave blank if you don't want to change it)" <br>
-          = f.password_field :password, autocomplete: 'off'
-
+          = f.label :bio
+          <br>
+          = f.text_area :bio, rows: 11, cols: 50
+          <br>
         .field
-          = f.label :password_confirmation <br>
-          = f.password_field :password_confirmation, autocomplete: 'off'
-
-        <div class="field">
-          = f.label :current_password
-          %i '(we need your current password to confirm your changes)' <br>
+          %i (Please enter your password to confirm your changes) <br>
           = f.password_field :current_password, autocomplete: 'off'
 
         .actions
@@ -32,8 +31,12 @@
 
     .row
       <br>
-      = link_to('Cancel my account', registration_path(resource_name), data: {confirm: 'Are you sure?'}, method: :delete, :class => 'pull-right btn btn-red')
-      <br>
-      <br>
-      = link_to 'Back', :back, :style => 'font-size: 24px'
+      = @upd = User.find_by_cv(current_user.cv)
+      = if @upd
+        %h3 We have your CV, thank you.
+      = else
+        = link_to 'Add your CV', upload_cv_path, class: 'pull-left btn btn-lg btn-success'
+      = link_to('Cancel Application', registration_path(resource_name), data: {confirm: 'Are you sure?'}, method: :delete, :class => 'pull-right btn btn-lg btn-red')
+
+
 

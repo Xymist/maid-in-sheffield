@@ -11,7 +11,7 @@ class CvsController < ApplicationController
         @cv = Cv.new(cv_params)
         if @cv.save
             flash[:success] = 'CV saved!'
-            redirect_to cvs_path
+            redirect_to edit_user_registration_path
         else
             render 'new'
         end

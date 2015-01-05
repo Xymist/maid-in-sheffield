@@ -11,7 +11,7 @@ Dragonfly.app.configure do
   if Rails.env.development? || Rails.env.test?
 
   datastore :file,
-    root_path: Rails.root.join('public/system/dragonfly', Rails.env),
+    root_path: Rails.root.join('public/system/dragonfly/uploads'),
     server_root: Rails.root.join('public')
 
   else
@@ -22,7 +22,7 @@ Dragonfly.app.configure do
             access_token:         ENV['DROPBOX_ACCESS_TOKEN'],
             access_token_secret:  ENV['DROPBOX_ACCESS_TOKEN_SECRET'],
             user_id:              ENV['DROPBOX_USER_ID'],
-            root_path:            Rails.env # optional
+            root_path:            'uploads' # optional
 
   end
 end

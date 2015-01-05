@@ -4,11 +4,17 @@
 <ul class="row" id="cvs-list">
   <% @cvs.each do |cv| %>
       <li class="col-xs-3">
-        <a href="<%=cv.cv%>">Download CV</a>
+        <%if Rails.env.development? || Rails.env.test?%>
+            <%= link_to('Download CV', cv.cv.url, target: '_blank')%>
+        <%else%>
+            <%= link_to('Download CV', cv.cv.remote_url, target: '_blank')%>
+        <%end%>
+
         <p><%= cv.name %></p>
       </li>
   <% end %>
 </ul>
 
-<%= link_to 'Add your CV', new_cv_path, class: 'btn btn-lg btn-primary' %>
+<%= link_to 'Add your CV', upload_cv_path, class: 'btn btn-lg btn-primary' %>
 </div>
+
