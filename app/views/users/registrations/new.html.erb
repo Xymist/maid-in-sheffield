@@ -1,16 +1,20 @@
 <div class='container'>
-  <h1 class='pull-left headline'><br>Sign Up</h1>
+  <h1 class='pull-left headline'><br>Apply To Join Maid In Sheffield</h1>
 </div>
 
 <div class='container content'>
 
     <div class='col-xs-12'>
-      <div class='row' style='height: 500px;'>
+      <p>Please sign up, then click 'edit application' to tell us a little about yourself and submit a current CV.</p>
+      <h4>
+        <%=link_to('Already applied? Click here to sign in.', sign_in_path)%> <br>
+      </h4>
+      <div class='row' style='height: 500px; padding-top: 15px'>
         <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
           <%= devise_error_messages! %>
 
           <div class='field'>
-            <%= f.label :name %><br />
+            <%= f.label :full_name %> <br />
             <%= f.text_field :name, autofocus: true %>
           </div>
           <div class='field'>
@@ -23,12 +27,12 @@
             <% if @validatable %>
             <em>(<%= @minimum_password_length %> characters minimum)</em>
             <% end %><br />
-            <%= f.password_field :password, autocomplete: "off" %>
+            <%= f.password_field :password, autocomplete: 'off' %>
           </div>
 
           <div class='field'>
             <%= f.label :password_confirmation %><br />
-            <%= f.password_field :password_confirmation, autocomplete: "off" %>
+            <%= f.password_field :password_confirmation, autocomplete: 'off' %>
           </div>
 
           <div class="actions">
@@ -36,8 +40,6 @@
           </div>
         <% end %>
       </div>
-      <h4>
-        <%=link_to('Already applied?', sign_in_path)%>
-      </h4>
+
     </div>
 </div>

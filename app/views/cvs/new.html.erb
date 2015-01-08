@@ -1,17 +1,18 @@
 <div class="container">
-<h1>Add Your CV</h1>
+  <h1>Add Your CV</h1>
 </div>
 <div class="container content" style='height: 320px;'>
-<%= form_for @cv do |f| %>
-    <div class="form-group">
-      <%= f.hidden_field :name, value: current_user.name%>
-    </div>
-    <div class="form-group">
-      <%= f.label :cv %>
-      <%= f.file_field :cv, required: true %>
-    </div>
+  <p>Please upload your CV in .docx, .doc, .pdf or .txt format:</p>
+  <%= form_for @cv do |f| %>
+      <div class="form-group">
+        <%= f.hidden_field :name, value: current_user.name %>
+      </div>
+      <div class="form-group">
+        <%= f.label :cv %>
+        <%= f.file_field :cv, required: true %>
+      </div>
 
-    <%= f.submit 'Submit', class: 'btn btn-primary btn-lg' %>
-<% end %>
+      <%= f.submit 'Submit', class: 'btn btn-primary btn-lg' %>
+  <% end %>
 
 </div>

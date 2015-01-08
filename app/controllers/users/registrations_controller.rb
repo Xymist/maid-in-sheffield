@@ -1,7 +1,18 @@
 class Users::RegistrationsController < Devise::RegistrationsController
 # before_filter :configure_sign_up_params, only: [:create]
 # before_filter :configure_account_update_params, only: [:update]
+    def edit
+        @cvs = Cv.all
+    end
+    protected
 
+    def after_update_path_for(resource)
+        edit_user_registration_path
+    end
+
+    def after_sign_in_path_for(resource)
+        edit_user_registration_path
+    end
   # GET /resource/sign_up
   # def new
   #   super

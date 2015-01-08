@@ -1,19 +1,25 @@
 .container
-  %h1 Listing Users
+  %h1 Listing Applicants
 
 .container.content
   %table
     %thead
       %tr
-        %th ID
         %th Email
-        %th
+        %th Name
+        %th Bio
+        %th CV
         %th
 
     %tbody
       - @users.each do |user|
         %tr
-          %td=user.id
           %td=user.email
-          %td= link_to 'Edit', edit_user_path(user)
+          %td=user.name
+          %td=user.bio
+          - @cvs.each do |cv|
+            - if cv.name == user.name
+              %td=link_to('Download CV', cv.cv.remote_url)
+            - else
+              %td No CV Submitted
           %td= link_to 'Destroy', user, :method => :delete, :data => { :confirm => 'Are you sure?' }

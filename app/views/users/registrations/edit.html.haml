@@ -3,23 +3,24 @@
 
 .container.content
   .col-xs-12
-    .row{:style => 'height: 700px'}
+    .row{:style => 'height: 600px'}
       = form_for(resource, as: resource_name, url: registration_path(resource_name), html: {method: :put}) do |f|
         = devise_error_messages!
 
         .field
           = f.label :name
           <br>
-          = f.text_field :name
+          = f.text_field :name, readonly: true, autofocus: true
 
         .field
           = f.label :email
           <br>
-          = f.email_field :email, autofocus: true
+          = f.email_field :email
 
         .field
           = f.label :bio
           <br>
+          %i (Please tell us something about why you want to work for us) <br>
           = f.text_area :bio, rows: 11, cols: 50
           <br>
         .field
@@ -27,16 +28,15 @@
           = f.password_field :current_password, autocomplete: 'off'
 
         .actions
-          = f.submit 'Update'
+          = f.submit 'Update Your Application'
 
     .row
-      <br>
-      = @upd = User.find_by_cv(current_user.cv)
-      = if @upd
-        %h3 We have your CV, thank you.
-      = else
-        = link_to 'Add your CV', upload_cv_path, class: 'pull-left btn btn-lg btn-success'
+      <br><br>
+      - @cvs.each do |cv|
+        - if cv.name == current_user.name
+          = link_to('We have your CV, thank you', cv.cv.remote_url, target: '_blank', class: 'pull-left btn btn-lg btn-success')
+          - @cv_present = true
+      - unless @cv_present
+        = link_to('Add your CV', upload_cv_path, class: 'pull-left btn btn-lg btn-success')
       = link_to('Cancel Application', registration_path(resource_name), data: {confirm: 'Are you sure?'}, method: :delete, :class => 'pull-right btn btn-lg btn-red')
-
-
 
