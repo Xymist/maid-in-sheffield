@@ -7,23 +7,21 @@
   .item= image_tag('slider_3.jpg')
 
 #slidertext.col-xs-12
-  Introducing Maid In Sheffield <br><small>A professional maid service, with made in Sheffield quality</small>
+  Perfect Domestic Cleaning In Sheffield<br><small>What if booking your house cleaning in Sheffield was so much easier?</small>
   .col-xs-6.col-xs-offset-3
     = link_to('Who Are We?', about_us_path, :class => 'btn-u btn-brd btn-brd-hover btn-u-light btn-top-buffered')
     = link_to('Book Online', booking_form_path, :class => 'btn-u btn-brd btn-brd-hover btn-u-light btn-top-buffered')
 
 .purchase
   .container
-    .row
-      .col-xs-6.col-xs-offset-3.animated.fadeInLeft
-        .row
-          %h1 BOOK WITH US IN 60 SECONDS!
-          %form{:action => '/booking_form', :method => 'post'}
-            %input{:name => 'authenticity_token', :type => 'hidden', :value => form_authenticity_token}
-            .col-xs-7.col-xs-offset-1
-              %input{:type => 'text', :name => 'postcode', :placeholder => 'Post Code'}
-            .col-xs-4
-              %input{:name => 'commit', :type => 'submit', :value => 'Book Now!', :class => 'btn btn-success'}
+    #BookNowPostcode.row
+      %h1 BOOK WITH US IN 60 SECONDS!
+      %form{:action => '/booking_form', :method => 'post'}
+        %input{:name => 'authenticity_token', :type => 'hidden', :value => form_authenticity_token}
+        #PostcodeInput.col-xs-2.col-xs-offset-4
+          %input{:type => 'text', :name => 'postcode', :placeholder => 'Post Code'}
+        #PostcodeBookButton.col-xs-4
+          %input{:name => 'commit', :type => 'submit', :value => 'Book Now!', :class => 'btn btn-success'}
 
 .container.content
   .row.margin-bottom-30

@@ -1,38 +1,40 @@
 <div class="container">
-   <h1 class="pull-left headline"><br>Contact Us</h1>
+   <h1 class="pull-left headline"><br>Get In Touch</h1>
 </div> 
 
 <div class="container content">	
-  <div class="col-md-8 col-md-offset-2" style="height: 600px;">
+  <div class="col-md-8" style="height: 600px;" id="ContactForm">
     <%= form_for Message.new, :url => contact_path do |form| %>
     <fieldset class="fields">
+
+      <p>Your Name:</p>
       <div class="field">
-        <%= form.label :name %>
         <%= form.text_field :name %>
       </div>
 
+      <p>Your Email Address:</p>
       <div class="field">
-        <%= form.label :email %>
         <%= form.text_field :email %>
-      </div>
-      
-      <div class="field">
-        <%= form.label :subject %>
-        <%= form.text_field :subject %>
       </div>
 
       <div class="field">
-        <%= form.label :body %>
+        <%= form.hidden_field :subject, value: 'Client Inquiry - Maid In Sheffield' %>
+      </div>
+
+      <p>What can we help you with?</p>
+      <div class="field">
         <%= form.text_area :body %>
       </div>
     </fieldset>
 
     <fieldset class="actions">
-      <%= form.submit 'Send Email' %>
+      <%= form.submit 'Submit', class: 'pull-right'%>
     </fieldset>
-    
-    
+
     <% end %>
+  </div>
+  <div class="col-md-3 col-md-offset-1">
+    <%= render 'shared/contact_details'%>
   </div>
 
 </div>

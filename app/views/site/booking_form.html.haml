@@ -4,34 +4,7 @@
   %h1.pull-left <br>Booking Form
 
 .container.content
-  .col-xs-6.thumbnail-style
-    .headline
-      %h4 You're Almost There!
-    %ul.list-unstyled.margin-bottom-20
-      %li
-        %i.fa.fa-asterisk.color-grey
-        Choose Your Date and Time – 7 Days / Week
-      %li
-        %i.fa.fa-asterisk.color-grey
-        Booking Confirmations and Cleaning Reminders Via Email
-      %li
-        %i.fa.fa-asterisk.color-grey
-        Feel Safe With Our 100% Service Guarantee
-      %li
-        %i.fa.fa-asterisk.color-grey
-        Our Maids Bring All Necessary Supplies
-      %li
-        %i.fa.fa-asterisk.color-grey
-        Fully Insured For Your Protection
-      %li
-        %i.fa.fa-asterisk.color-grey
-        Get Discounts With Regular Cleanings
-  .col-xs-4.col-xs-offset-2.thumbnail-style
-    .headline
-      %h4 Any Questions?
-    %p If there's anything you need to know, or if you think you'll need a specialised service, do call us on 0114 2676 137
-
-  .col-xs-8.col-xs-offset-2
+  .col-xs-8
     :plain
       <script src="https://maidinsheffield.launch27.com/js/jquery.min.js"></script>
       <script src="https://maidinsheffield.launch27.com/jsbundle"></script>
@@ -44,3 +17,35 @@
       } // Dynamically add the iFrame to the page with proper linker parameters.
       ga(addiFrame('booking-widget-iframe', 'https://maidinsheffield.launch27.com/?w')); </script>
     %iframe{:id => 'booking-widget-iframe', :src => 'https://maidinsheffield.launch27.com/?w', :style => 'border: none; width: 100%; height: 2200px; overflow: hidden', :scrolling => 'no'}
+
+  .col-xs-3.col-xs-offset-1.thumbnail-style
+    .headline
+      %h4 You're Almost There!
+    %ul.list-unstyled.margin-bottom-20
+      %li
+        <br>
+        %i.fa.fa-asterisk.color-grey
+        Choose Your Date and Time – 7 Days / Week
+      %li
+        <br>
+        %i.fa.fa-asterisk.color-grey
+        Booking Confirmations and Cleaning Reminders Via Email
+      %li
+        <br>
+        %i.fa.fa-asterisk.color-grey
+        Feel Safe With Our 100% Service Guarantee
+      %li
+        <br>
+        %i.fa.fa-asterisk.color-grey
+        Our Maids Bring All Necessary Supplies
+      %li
+        <br>
+        %i.fa.fa-asterisk.color-grey
+        Fully Insured For Your Protection
+      %li
+        <br>
+        %i.fa.fa-asterisk.color-grey
+        Get Discounts With Regular Cleanings
+    .headline
+      %h4 <br> Any Questions?
+    %p If there's anything you need to know, or if you think you'll need a specialised service, do call us on 0114 2676 137
