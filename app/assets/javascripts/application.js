@@ -1,4 +1,4 @@
-// This is a manifest file that'll be compiled into application.js, which will include all the files
+// This is a manifest file that will be compiled into application.js, which will include all the files
 // listed below.
 //
 // Any JavaScript/Coffee file within this directory, lib/assets/javascripts, vendor/assets/javascripts,
@@ -14,8 +14,9 @@
 //= require jquery_ujs
 //= require owl.carousel
 //= require bootstrap
+//= require turbolinks
 //= require react
 //= require priceReactor
-//= require radiogroup
+//= require radioGroup.js.jsx
 //= require_tree .
 
