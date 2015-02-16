@@ -14,5 +14,8 @@
 //= require jquery_ujs
 //= require owl.carousel
 //= require bootstrap
+//= require react
+//= require priceReactor
+//= require radiogroup
 //= require_tree .
 

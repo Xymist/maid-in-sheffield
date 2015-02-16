@@ -31,6 +31,7 @@ Rails.application.routes.draw do
   get '/testimonials' => 'site#testimonials'
   get '/tos' => 'site#tos'
   get '/gift_cards' => 'site#gift_cards'
+  get '/prices' => 'site#prices'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
