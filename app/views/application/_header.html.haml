@@ -1,0 +1,55 @@
+#floatheader.header
+  .navbar.navbar-default{:role => 'navigation'}
+    .container
+      .topbar
+        .col-xs-2
+          = link_to(image_tag('MIS_Banner_notSoSmall.png', alt: 'Maid In Sheffield Logo'), 'https://maidinsheffield.co.uk/', id: 'biglogo')
+          = link_to(image_tag('mis-banner-small.png', alt: 'Maid In Sheffield Logo'), 'https://maidinsheffield.co.uk/', id: 'smalllogo')
+
+        .col-xs-10
+          %ul.loginbar.pull-right
+
+            - if user_signed_in?
+              %li.topbar-devider
+              %li= link_to 'FAQ', 'https://maidinsheffield.co.uk/faq'
+              %li.topbar-devider
+              %li= current_user.email
+              %li= link_to('Edit Application', 'https://maidinsheffield.co.uk/users/edit')
+              %li.topbar-devider
+              %li= link_to('Log Out', 'https://maidinsheffield.co.uk/users/sign_out', method: :delete)
+            - elsif admin_signed_in?
+              %li.topbar-devider
+              %li= link_to('Edit Prices', 'https://maidinsheffield.co.uk/homes')
+              %li.topbar-devider
+              %li= link_to('Edit Services', 'https://maidinsheffield.co.uk/services')
+              %li.topbar-devider
+              %li= link_to('See Applicants', 'https://maidinsheffield.co.uk/users')
+              %li.topbar-devider
+              %li= link_to('Log Out', 'https://maidinsheffield.co.uk/admins/sign_out', method: :delete)
+            - else
+              %li.topbar-devider
+              %li= link_to 'FAQ', 'https://maidinsheffield.co.uk/faq'
+              %li.topbar-devider
+              %li= link_to 'Contact Us', 'https://maidinsheffield.co.uk/contact'
+              %li.topbar-devider
+              %li= link_to 'Work For Us', 'https://maidinsheffield.co.uk/join_us'
+              %li.topbar-devider
+              %li= link_to 'Gift Cards', 'https://maidinsheffield.co.uk/gift_cards'
+              %li.topbar-devider
+              %li= link_to('Client Login', 'https://maidinsheffield.launch27.com/signup')
+
+      .navbar-header
+        %button.navbar-toggle{:type => 'button', :data => {:toggle => 'collapse', :target => '.navbar-responsive-collapse'}}
+          %span.sr-only Toggle navigation
+          %span.fa.fa-bars/
+
+      .collapse.navbar-collapse.navbar-responsive-collapse
+        .col-xs-9
+          %ul.nav.navbar-nav
+            %li= link_to 'About Us', 'https://maidinsheffield.co.uk/about_us'
+            %li= link_to 'Testimonials', 'https://maidinsheffield.co.uk/testimonials'
+            %li= link_to 'Services & Pricing', 'https://maidinsheffield.co.uk/price_grid'
+            %li= link_to 'Student Deal', 'https://maidinsheffield.co.uk/student_pack'
+
+        .col-xs-1
+          =link_to('BOOK NOW!', 'https://maidinsheffield.co.uk/booking_form', :type => 'button', :class => 'btn btn-success', :id => 'bookbuttonheader')
