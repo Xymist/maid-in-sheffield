@@ -15,7 +15,6 @@
 //= require owl.carousel
 //= require bootstrap
 //= require turbolinks
-//= require react
 //= require priceReactor
 //= require radioGroup.js.jsx
 //= require_tree .

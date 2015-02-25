@@ -78,7 +78,4 @@ Rails.application.configure do
 
   config.action_mailer.default_url_options = { host: 'https://maid-in-sheffield.herokuapp.com', port: 3000 }
 
-  MaidInSheffield::Application.configure do
-      config.react.variant = :production
-  end
 end

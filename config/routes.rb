@@ -8,6 +8,8 @@ Rails.application.routes.draw do
       get 'join_us', to: 'users/registrations#new'
   end
 
+  mount Monologue::Engine, at: '/blog'
+
   resources :homes
   resources :services
   resources :users

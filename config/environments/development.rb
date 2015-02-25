@@ -37,7 +37,4 @@ Rails.application.configure do
 
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 
-  MaidInSheffield::Application.configure do
-      config.react.variant = :development
-  end
 end
