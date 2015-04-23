@@ -1,8 +1,2 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project version="4">
-  <component name="dataSourceStorageLocal">
-    <data-source name="Rails maid-in-sheffield: development" uuid="4b0974e7-b64f-4845-8c86-255c7e951ab7" />
-    <data-source name="Rails maid-in-sheffield: test" uuid="9b060bd7-f8a5-47b5-8a60-a189bcd99126" />
-    <data-source name="Rails maid-in-sheffield: production" uuid="da2c441e-8fae-49fd-b93a-b8ecf67e6987" />
-  </component>
-</project>
+<project version="4" />
