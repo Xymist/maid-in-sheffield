@@ -1,2 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project version="4" />
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="Rails maid-in-sheffield: development" uuid="043705fc-9c5c-42a1-bb5a-65ada7927910">
+      <schema-pattern>db/development-mis.*</schema-pattern>
+      <default-schemas>db/development-mis.*</default-schemas>
+    </data-source>
+    <data-source name="Rails maid-in-sheffield: test" uuid="9009e263-b34b-4c60-831f-51d849594f1f">
+      <schema-pattern>db/test-mis.*</schema-pattern>
+      <default-schemas>db/test-mis.*</default-schemas>
+    </data-source>
+    <data-source name="Rails maid-in-sheffield: production" uuid="5a3a2dc6-17ff-4e8b-885f-5f5fe226bfd6">
+      <schema-pattern>db/production-mis.*</schema-pattern>
+      <default-schemas>db/production-mis.*</default-schemas>
+    </data-source>
+  </component>
+</project>

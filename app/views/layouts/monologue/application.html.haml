@@ -36,6 +36,9 @@
           - if alert
             %p.alert.flashies-red
               = alert
-          = yield
-          = render 'application/sidebar'
+          .container{:style => 'padding-top: 20px'}
+            .col-md-9
+              = yield
+            .col-md-3
+              = render 'application/sidebar'
         = render 'application/footer'
