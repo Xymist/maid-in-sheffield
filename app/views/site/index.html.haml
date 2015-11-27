@@ -1,8 +1,27 @@
 %title
   Home Cleaning by Maid In Sheffield
+#frontslider.owl-carousel.owl-theme
 
-#so-long.container
-  %h1 <br>Unfortunately, we at Maid in Sheffield have had to make the sad decision to cease trading. Thank you all for your custom, and we wish you all the very best.
+  .item= image_tag('slider_1.jpg')
+  .item= image_tag('slider_2.jpg')
+  .item= image_tag('slider_3.jpg')
+
+#slidertext.col-xs-12
+  Perfect Domestic Cleaning In Sheffield<br><small>What if booking your house cleaning in Sheffield was so much easier?</small>
+  .col-xs-6.col-xs-offset-3
+    = link_to('Who Are We?', about_us_path, :class => 'btn-u btn-brd btn-brd-hover btn-u-light btn-top-buffered')
+    = link_to('Book Online', booking_form_path, :class => 'btn-u btn-brd btn-brd-hover btn-u-light btn-top-buffered')
+
+.purchase
+  .container
+    #BookNowPostcode.row
+      %h1 BOOK WITH US IN 60 SECONDS!
+      %form{:action => '/booking_form', :method => 'post'}
+        %input{:name => 'authenticity_token', :type => 'hidden', :value => form_authenticity_token}
+        #PostcodeInput.col-xs-2.col-xs-offset-4
+          %input{:type => 'text', :name => 'postcode', :placeholder => 'Post Code'}
+        #PostcodeBookButton.col-xs-4
+          %input{:name => 'commit', :type => 'submit', :value => 'Book Now!', :class => 'btn btn-success'}
 
 .container.content
   .row.margin-bottom-30
